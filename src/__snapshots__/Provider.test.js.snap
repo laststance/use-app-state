@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`doesn't work without children 1`] = `"React.Children.only expected to receive a single React element child."`;
+
+exports[`doesn't work without giving initialState 1`] = `"react-topdown: Expected the initialState to be a PlainObject"`;
+
+exports[`work fine with PlainObject initialState 1`] = `
+<div>
+  elm
+</div>
+`;
+
+exports[`work fine with PlainObject initialState 2`] = `
+<div>
+  elm
+</div>
+`;
+
+exports[`work fine with PlainObject initialState 3`] = `
+<div>
+  elm
+</div>
+`;
