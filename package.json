@@ -1,0 +1,61 @@
+{
+  "name": "react-topdown",
+  "version": "1.0.0",
+  "description": "Hooks friendly state management for React",
+  "keywords": [
+    "react",
+    "state",
+    "hooks"
+  ],
+  "author": "Ryota Murakami <dojce1048@gmail.com> (https://github.com/ryota-murakami)",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "index.d.ts",
+  "files": [
+    "lib",
+    "es",
+    "src",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "flow": "flow",
+    "lint": "yarn eslint src",
+    "lint:fix": "yarn eslint --fix src",
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "react": "16.7.0-alpha.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^5.9.0",
+    "eslint-config-react-app": "^3.0.5",
+    "eslint-plugin-flowtype": "^3.2.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "flow-bin": "^0.86.0",
+    "jest": "^23.6.0",
+    "jest-dom": "^2.1.1",
+    "prettier": "^1.15.2",
+    "react-test-renderer": "16.7.0-alpha.0",
+    "react-testing-library": "^5.2.3",
+    "rollup": "^0.67.0",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-node-resolve": "^3.4.0"
+  }
+}
