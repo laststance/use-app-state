@@ -1,0 +1,15 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/.*
+<PROJECT_ROOT>/public/.*
+<PROJECT_ROOT>/flow-typed/.*
+<PROJECT_ROOT>/build/.*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+suppress_comment=.*\\$FlowFixMe
+suppress_comment=.*\\$FlowIssue
