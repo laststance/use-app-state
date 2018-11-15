@@ -21,3 +21,9 @@ exports[`work fine with PlainObject initialState 3`] = `
   elm
 </div>
 `;
+
+exports[`work fine with PlainObject initialState 4`] = `
+<div>
+  elm
+</div>
+`;

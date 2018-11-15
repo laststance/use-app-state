@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Provider from './Provider'
 import TestRenderer from 'react-test-renderer'
+import StoreContext from './StoreContext'
 
 test(`doesn't work without children`, () => {
   expect(() =>
@@ -18,7 +19,7 @@ test(`doesn't work without giving initialState`, () => {
   ).toThrowErrorMatchingSnapshot()
 })
 
-const render = initialState =>
+const renderElm = initialState =>
   TestRenderer.create(
     <Provider initialState={initialState}>
       <div>elm</div>
@@ -26,27 +27,67 @@ const render = initialState =>
   ).toJSON()
 
 test(`work fine with PlainObject initialState`, () => {
-  var tree = render({})
+  var tree = renderElm({})
   expect(tree).toMatchSnapshot()
 
-  var tree = render({ name: 'mark' })
+  var tree = renderElm(new Object())
   expect(tree).toMatchSnapshot()
 
-  var tree = render({
+  var tree = renderElm({ name: 'mark' })
+  expect(tree).toMatchSnapshot()
+
+  var tree = renderElm({
     chunk: { home: { oneFloor: 'spacious', twoFloor: 'narrow' } },
     array: [1, 2, 3, 4]
   })
   expect(tree).toMatchSnapshot()
 })
 
-test(`doesn't work exept PlainObject`,() => {
-  expect(() => render(1)).toThrowError('react-topdown: Expected the initialState to be a PlainObject')
-  expect(() => render([])).toThrowError('react-topdown: Expected the initialState to be a PlainObject')
-  expect(() => render(new Map())).toThrowError('react-topdown: Expected the initialState to be a PlainObject')
-  expect(() => render(new Date())).toThrowError('react-topdown: Expected the initialState to be a PlainObject')
-  expect(() => render('string')).toThrowError('react-topdown: Expected the initialState to be a PlainObject')
-  expect(() => render(true)).toThrowError('react-topdown: Expected the initialState to be a PlainObject')
-  expect(() => render(undefined)).toThrowError('react-topdown: Expected the initialState to be a PlainObject')
-  expect(() => render(null)).toThrowError('react-topdown: Expected the initialState to be a PlainObject')
-  expect(() => render(NaN)).toThrowError('react-topdown: Expected the initialState to be a PlainObject')
+test(`doesn't work exept PlainObject`, () => {
+  expect(() => renderElm(1)).toThrowError(
+    'react-topdown: Expected the initialState to be a PlainObject'
+  )
+  expect(() => renderElm([])).toThrowError(
+    'react-topdown: Expected the initialState to be a PlainObject'
+  )
+  expect(() => renderElm(new Map())).toThrowError(
+    'react-topdown: Expected the initialState to be a PlainObject'
+  )
+  expect(() => renderElm(new Date())).toThrowError(
+    'react-topdown: Expected the initialState to be a PlainObject'
+  )
+  expect(() => renderElm('string')).toThrowError(
+    'react-topdown: Expected the initialState to be a PlainObject'
+  )
+  expect(() => renderElm(true)).toThrowError(
+    'react-topdown: Expected the initialState to be a PlainObject'
+  )
+  expect(() => renderElm(undefined)).toThrowError(
+    'react-topdown: Expected the initialState to be a PlainObject'
+  )
+  expect(() => renderElm(null)).toThrowError(
+    'react-topdown: Expected the initialState to be a PlainObject'
+  )
+  expect(() => renderElm(NaN)).toThrowError(
+    'react-topdown: Expected the initialState to be a PlainObject'
+  )
 })
+
+// TODO temp stacking
+// test('callback', () => {
+//   const Child = () => {
+//     const [store, setStore] = useContext(StoreContext)
+//
+//     return <div>{store.h}</div>
+//   }
+//   const Parent = () => {
+//     return (
+//       <Provider initialState={{ h: 'f' }}>
+//         <Child />
+//       </Provider>
+//     )
+//   }
+//
+//   const testRenderer = TestRenderer.create(<Parent />)
+//   console.log(testRenderer.toJSON())
+// })

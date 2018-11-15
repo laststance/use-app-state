@@ -1,3 +1,4 @@
 module.exports = {
-  transform: { '^.+\\.js$': 'babel-jest' }
+  transform: { '^.+\\.js$': 'babel-jest' },
+  testPathIgnorePatterns: ['/example/']
 }

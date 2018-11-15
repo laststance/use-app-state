@@ -16,13 +16,15 @@ export default function Provider({ initialState, children }: Props) {
   }
 
   const [store, setState] = useState(initialState)
-  const setStore = (state: Object) => {
+  const setStore = (state: Object, callback?: Function) => {
     if (!isPlainObject(state)) {
       throw new Error(
         'react-topdown: Expected the setState() 1st argument to be a PlainObject'
       )
     }
-
+  if (typeof callback === 'function') {
+    setState({ ...store, ...state }, callback)
+  }
     setState({ ...store, ...state })
   }
   return (

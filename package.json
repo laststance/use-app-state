@@ -27,7 +27,8 @@
     "build": "rollup -c"
   },
   "dependencies": {
-    "react": "16.7.0-alpha.0"
+    "react": "16.7.0-alpha.2",
+    "react-dom": "16.7.0-alpha.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
@@ -52,7 +53,7 @@
     "jest": "^23.6.0",
     "jest-dom": "^2.1.1",
     "prettier": "^1.15.2",
-    "react-test-renderer": "16.7.0-alpha.0",
+    "react-test-renderer": "16.7.0-alpha.2",
     "react-testing-library": "^5.2.3",
     "rollup": "^0.67.0",
     "rollup-plugin-babel": "^4.0.3",
