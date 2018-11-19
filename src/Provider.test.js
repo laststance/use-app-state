@@ -101,4 +101,3 @@ test('Provider is sharing initialState to Receiver', () => {
     testRenderer.root.findByProps({ className: 'button' }).children
   ).toEqual(['0'])
 })
-
