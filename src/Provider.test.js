@@ -72,22 +72,3 @@ test(`doesn't work exept PlainObject`, () => {
     'react-topdown: Expected the initialState to be a PlainObject'
   )
 })
-
-// TODO temp stacking
-// test('callback', () => {
-//   const Child = () => {
-//     const [store, setStore] = useContext(StoreContext)
-//
-//     return <div>{store.h}</div>
-//   }
-//   const Parent = () => {
-//     return (
-//       <Provider initialState={{ h: 'f' }}>
-//         <Child />
-//       </Provider>
-//     )
-//   }
-//
-//   const testRenderer = TestRenderer.create(<Parent />)
-//   console.log(testRenderer.toJSON())
-// })
