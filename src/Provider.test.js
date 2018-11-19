@@ -72,3 +72,33 @@ test(`doesn't work exept PlainObject`, () => {
     'react-topdown: Expected the initialState to be a PlainObject'
   )
 })
+
+const Receiver = () => {
+  const { store, setStore } = useContext(StoreContext)
+
+  const handleClick = () => setStore({ count: store.count + 1 })
+
+  return (
+    <button className="button" onClick={handleClick}>
+      {store.count}
+    </button>
+  )
+}
+
+const App = () => {
+  const initialState = { count: 0 }
+
+  return (
+    <Provider initialState={initialState}>
+      <Receiver />
+    </Provider>
+  )
+}
+
+test('Provider is sharing initialState to Receiver', () => {
+  const testRenderer = TestRenderer.create(<App />)
+  expect(
+    testRenderer.root.findByProps({ className: 'button' }).children
+  ).toEqual(['0'])
+})
+
