@@ -24,7 +24,8 @@
     "flow": "flow",
     "lint": "yarn eslint src",
     "lint:fix": "yarn eslint --fix src",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "cp:example": "cp src/Provider.js example/src/lib/ && cp src/StoreContext.js example/src/lib/ && cp -R src/util example/src/lib/"
   },
   "dependencies": {
     "react": "16.7.0-alpha.2",
