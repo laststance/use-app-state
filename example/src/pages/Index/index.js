@@ -1,30 +1,23 @@
 import React, { memo, useContext } from 'react'
 import styled from 'react-emotion'
-import { withStyles } from '@material-ui/core/styles'
-import compose from '../../compose'
 import StoreContext from '../../lib/StoreContext'
 import Button from '@material-ui/core/Button'
-
-const styles = theme => ({
-  button: {
-    margin: theme.spacing.unit
-  },
-  input: {
-    display: 'none'
-  }
-})
 
 const Screen = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `
 
-const Num = styled.div`
+const NumArea = styled.div`
   display: flex;
+  flex-direction: flow;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 `
 
 function Index({ classes }) {
@@ -38,24 +31,16 @@ function Index({ classes }) {
   return (
     <Screen>
       <div>Index Page</div>
-      <Button
-        onClick={handleClick}
-        variant="outlined"
-        color="primary"
-        className={classes.button}
-      >
+      <Button onClick={handleClick} variant="outlined" color="primary">
         Action
       </Button>
-      <Num>
+      <NumArea>
         {numray.map(i => (
           <div key={i}>{i}</div>
         ))}
-      </Num>
+      </NumArea>
     </Screen>
   )
 }
 
-export default compose(
-  withStyles(styles),
-  memo
-)(Index)
+export default memo(Index)
