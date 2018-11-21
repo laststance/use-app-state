@@ -1,9 +1,7 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Provider from './Provider'
 import TestRenderer from 'react-test-renderer'
-import StoreContext from './StoreContext'
 import 'jest-dom/extend-expect'
-
 
 test(`doesn't work without children`, () => {
   expect(() =>
