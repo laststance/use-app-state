@@ -19,8 +19,8 @@
     "index.d.ts"
   ],
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "test": "jest --silent",
+    "test:watch": "jest --watch --silent",
     "flow": "flow",
     "lint": "yarn eslint src",
     "lint:fix": "yarn eslint --fix src",
