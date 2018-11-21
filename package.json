@@ -25,7 +25,9 @@
     "lint": "yarn eslint src",
     "lint:fix": "yarn eslint --fix src",
     "build": "rollup -c",
-    "cp:example": "cp src/Provider.js example/src/lib/ && cp src/StoreContext.js example/src/lib/ && cp -R src/util example/src/lib/"
+    "cp:example": "cp src/Provider.js example/src/lib/ && cp src/StoreContext.js example/src/lib/ && cp -R src/util example/src/lib/",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   },
   "dependencies": {
     "react": "16.7.0-alpha.2",
@@ -37,6 +39,7 @@
     "@babel/preset-env": "^7.1.5",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "all-contributors-cli": "^5.4.1",
     "babel-core": "^7.0.0-bridge",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
