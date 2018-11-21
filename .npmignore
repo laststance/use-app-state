@@ -1,7 +1,6 @@
 .git
 .idea
 yarn-error.log
-sample.js
 .eslintrc
 .prettierrc
 img
