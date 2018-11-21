@@ -24,8 +24,8 @@ const Screen = styled.div`
 `
 
 const Num = styled.div`
-    display: flex;
- `
+  display: flex;
+`
 
 function Index({ classes }) {
   const { store, setStore } = useContext(StoreContext)
