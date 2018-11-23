@@ -1,4 +1,6 @@
 import Provider from './Provider'
 import StoreContext from './StoreContext'
 
-export { Provider, StoreContext }
+export default Provider
+
+export { StoreContext }
