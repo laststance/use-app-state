@@ -26,10 +26,10 @@ const Receiver = () => {
 }
 
 const App = () => {
-  const initialState = { count: 0, stable: { blank: 'blank' } }
+  const StoreState = { count: 0, stable: { blank: 'blank' } }
 
   return (
-    <Provider initialState={initialState}>
+    <Provider Store={StoreState}>
       <Receiver />
     </Provider>
   )
@@ -54,7 +54,7 @@ test('should count increments by setStore()', () => {
   expect(countNode).toHaveTextContent('3')
   fireEvent.click(countNode)
 
-  // stable is still untouch above tests, so confirm state is initialValue
+  // stable is still untouch above tests, so confirm state is StoreValue
   const stableNode = getByTestId('stable')
   expect(stableNode).toHaveTextContent(`{"blank":"blank"}`)
 })

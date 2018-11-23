@@ -2,27 +2,27 @@
 
 exports[`doesn't work without children 1`] = `"React.Children.only expected to receive a single React element child."`;
 
-exports[`doesn't work without giving initialState 1`] = `"react-topdown: Expected the initialState to be a PlainObject"`;
+exports[`doesn't work without giving Store 1`] = `"react-topdown: Expected the Store to be a PlainObject"`;
 
-exports[`work fine with PlainObject initialState 1`] = `
+exports[`work fine with PlainObject Store 1`] = `
 <div>
   elm
 </div>
 `;
 
-exports[`work fine with PlainObject initialState 2`] = `
+exports[`work fine with PlainObject Store 2`] = `
 <div>
   elm
 </div>
 `;
 
-exports[`work fine with PlainObject initialState 3`] = `
+exports[`work fine with PlainObject Store 3`] = `
 <div>
   elm
 </div>
 `;
 
-exports[`work fine with PlainObject initialState 4`] = `
+exports[`work fine with PlainObject Store 4`] = `
 <div>
   elm
 </div>
