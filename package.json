@@ -25,7 +25,6 @@
     "lint": "yarn eslint src",
     "lint:fix": "yarn eslint --fix src",
     "build": "rollup -c",
-    "cp:example": "cp src/Provider.js example/src/lib/ && cp src/StoreContext.js example/src/lib/ && cp -R src/util example/src/lib/",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"
   },
