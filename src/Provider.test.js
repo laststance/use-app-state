@@ -70,4 +70,7 @@ test(`doesn't work exept PlainObject`, () => {
   expect(() => renderElm(NaN)).toThrowError(
     'react-topdown: Expected the Store to be a PlainObject'
   )
+  expect(() => renderElm({ count: 0 })).not.toThrowError(
+    'react-topdown: Expected the Store to be a PlainObject'
+  )
 })

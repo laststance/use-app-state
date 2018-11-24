@@ -1,7 +1,7 @@
 {
   "name": "react-topdown",
-  "version": "1.0.1",
-  "description": "Hooks friendly state management for React",
+  "version": "1.0.1s",
+  "description": "Hooks native state management for React",
   "keywords": [
     "react",
     "state",
