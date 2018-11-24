@@ -4,7 +4,7 @@ import pkg from './package.json'
 
 const plugins = [
   babel({
-    exclude: 'node_modules/**'
+    exclude: ['node_modules/**', 'src/**/*.test.js']
   }),
   resolve()
 ]
