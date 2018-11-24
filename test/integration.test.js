@@ -1,7 +1,7 @@
 import { cleanup, render, fireEvent } from 'react-testing-library'
 import React, { useContext } from 'react'
-import StoreContext from './StoreContext'
-import Provider from './Provider'
+import StoreContext from '../src/StoreContext'
+import Provider from '../src/Provider'
 import 'jest-dom/extend-expect'
 
 afterEach(cleanup)

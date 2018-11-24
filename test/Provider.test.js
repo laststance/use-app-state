@@ -1,5 +1,5 @@
 import React from 'react'
-import Provider from './Provider'
+import Provider from '../src/Provider'
 import TestRenderer from 'react-test-renderer'
 
 test(`doesn't work without children`, () => {
