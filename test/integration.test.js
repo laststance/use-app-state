@@ -29,7 +29,7 @@ const App = () => {
   const StoreState = { count: 0, stable: { blank: 'blank' } }
 
   return (
-    <Provider Store={StoreState}>
+    <Provider store={StoreState}>
       <Receiver />
     </Provider>
   )

@@ -4,18 +4,17 @@ import isPlainObject from './util/isPlainObject'
 import StoreContext from './StoreContext'
 
 type Props = {
-  Store: Object,
+  store: Object,
   children: React$Node
 }
 
-export default function Provider({ Store, children }: Props) {
-  if (!isPlainObject(Store)) {
-    throw new Error(
-      'react-topdown: Expected the Store to be a PlainObject'
-    )
+export default function Provider({ store, children }: Props) {
+  if (!isPlainObject(store)) {
+    throw new Error('react-topdown: Expected the Store to be a PlainObject')
   }
 
-  const [store, setState] = useState(Store)
+  // avoid name collision "store"
+  const [tmpStore, setState] = useState(store)
   const setStore = (state: Object) => {
     if (!isPlainObject(state)) {
       throw new Error(
@@ -23,13 +22,13 @@ export default function Provider({ Store, children }: Props) {
       )
     }
 
-    setState({ ...store, ...state })
+    setState({ ...tmpStore, ...state })
   }
 
   return (
     <StoreContext.Provider
       value={{
-        store,
+        store: tmpStore,
         setStore
       }}
     >

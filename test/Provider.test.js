@@ -4,7 +4,7 @@ import TestRenderer from 'react-test-renderer'
 
 test(`doesn't work without children`, () => {
   expect(() =>
-    TestRenderer.create(<Provider Store={{}} />)
+    TestRenderer.create(<Provider store={{}} />)
   ).toThrowErrorMatchingSnapshot()
 })
 
@@ -20,7 +20,7 @@ test(`doesn't work without giving Store`, () => {
 
 const renderElm = Store =>
   TestRenderer.create(
-    <Provider Store={Store}>
+    <Provider store={Store}>
       <div>elm</div>
     </Provider>
   ).toJSON()
