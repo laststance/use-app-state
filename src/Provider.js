@@ -13,7 +13,7 @@ export default function Provider({ store, children }: Props) {
     throw new Error('react-topdown: Expected the Store to be a PlainObject')
   }
 
-  // avoid name collision "store"
+  // "tmpStore" role is avoid name collision "store"
   const [tmpStore, setState] = useState(store)
   const setStore = (state: Object) => {
     if (!isPlainObject(state)) {
