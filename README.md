@@ -15,9 +15,6 @@
 
 ## Usage
 
-## API
-
-
 ## Contributors
 
 ## LICENSE
