@@ -1,13 +1,13 @@
 import { cleanup, render, fireEvent } from 'react-testing-library'
-import React, { useContext } from 'react'
-import StoreContext from '../src/StoreContext'
+import React from 'react'
+import useStore from '../src/useStore'
 import Provider from '../src/Provider'
 import 'jest-dom/extend-expect'
 
 afterEach(cleanup)
 
 const Receiver = () => {
-  const { store, setStore } = useContext(StoreContext)
+  const { store, setStore } = useStore()
 
   const clickCount = () => setStore({ count: store.count + 1 })
 

@@ -1,7 +1,7 @@
 // @flow // $FlowIssue flow doesn't know hook
 import React, { useState, Children } from 'react'
 import isPlainObject from './util/isPlainObject'
-import StoreContext from './StoreContext'
+import Context from './Context'
 
 type Props = {
   store: Object,
@@ -26,13 +26,13 @@ export default function Provider({ store, children }: Props) {
   }
 
   return (
-    <StoreContext.Provider
+    <Context.Provider
       value={{
         store: tmpStore,
         setStore
       }}
     >
       {Children.only(children)}
-    </StoreContext.Provider>
+    </Context.Provider>
   )
 }
