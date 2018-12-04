@@ -8,7 +8,9 @@ type Props = {
   children: React$Node
 }
 
-export default function Provider({ store, children }: Props) {
+export default function Provider(props: Props) {
+  const { store } = props
+
   if (!isPlainObject(store)) {
     throw new Error('react-topdown: Expected the Store to be a PlainObject')
   }
@@ -32,7 +34,7 @@ export default function Provider({ store, children }: Props) {
         setStore
       }}
     >
-      {Children.only(children)}
+      {Children.only(props.children)}
     </Context.Provider>
   )
 }
