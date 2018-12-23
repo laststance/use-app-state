@@ -44,33 +44,33 @@ test(`work fine with PlainObject Store`, () => {
 
 test(`doesn't work exept PlainObject`, () => {
   expect(() => renderElm(1)).toThrowError(
-    'react-topdown: Expected the Store to be a PlainObject'
+    'muriatic: Expected the Store to be a PlainObject'
   )
   expect(() => renderElm([])).toThrowError(
-    'react-topdown: Expected the Store to be a PlainObject'
+    'muriatic: Expected the Store to be a PlainObject'
   )
   expect(() => renderElm(new Map())).toThrowError(
-    'react-topdown: Expected the Store to be a PlainObject'
+    'muriatic: Expected the Store to be a PlainObject'
   )
   expect(() => renderElm(new Date())).toThrowError(
-    'react-topdown: Expected the Store to be a PlainObject'
+    'muriatic: Expected the Store to be a PlainObject'
   )
   expect(() => renderElm('string')).toThrowError(
-    'react-topdown: Expected the Store to be a PlainObject'
+    'muriatic: Expected the Store to be a PlainObject'
   )
   expect(() => renderElm(true)).toThrowError(
-    'react-topdown: Expected the Store to be a PlainObject'
+    'muriatic: Expected the Store to be a PlainObject'
   )
   expect(() => renderElm(undefined)).toThrowError(
-    'react-topdown: Expected the Store to be a PlainObject'
+    'muriatic: Expected the Store to be a PlainObject'
   )
   expect(() => renderElm(null)).toThrowError(
-    'react-topdown: Expected the Store to be a PlainObject'
+    'muriatic: Expected the Store to be a PlainObject'
   )
   expect(() => renderElm(NaN)).toThrowError(
-    'react-topdown: Expected the Store to be a PlainObject'
+    'muriatic: Expected the Store to be a PlainObject'
   )
   expect(() => renderElm({ count: 0 })).not.toThrowError(
-    'react-topdown: Expected the Store to be a PlainObject'
+    'muriatic: Expected the Store to be a PlainObject'
   )
 })

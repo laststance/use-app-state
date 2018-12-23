@@ -12,7 +12,7 @@ export default function Provider(props: Props) {
   const { store } = props
 
   if (!isPlainObject(store)) {
-    throw new Error('react-topdown: Expected the Store to be a PlainObject')
+    throw new Error('muriatic: Expected the Store to be a PlainObject')
   }
 
   // "tmpStore" role is avoid name collision "store"
@@ -20,7 +20,7 @@ export default function Provider(props: Props) {
   const setStore = (state: Object) => {
     if (!isPlainObject(state)) {
       throw new Error(
-        'react-topdown: Expected the setStore() argument to be a PlainObject'
+        'muriatic: Expected the setStore() argument to be a PlainObject'
       )
     }
 

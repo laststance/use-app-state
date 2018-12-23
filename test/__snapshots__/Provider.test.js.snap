@@ -2,7 +2,7 @@
 
 exports[`doesn't work without children 1`] = `"React.Children.only expected to receive a single React element child."`;
 
-exports[`doesn't work without giving Store 1`] = `"react-topdown: Expected the Store to be a PlainObject"`;
+exports[`doesn't work without giving Store 1`] = `"muriatic: Expected the Store to be a PlainObject"`;
 
 exports[`work fine with PlainObject Store 1`] = `
 <div>
