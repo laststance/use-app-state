@@ -2,7 +2,7 @@
   "projectName": "muriatic",
   "projectOwner": "Ryota Murakami",
   "repoType": "github",
-  "repoHost": "https://github.com/ryota-murakami/muriatic",
+  "repoHost": "git@github.com:ryota-murakami/muriatic.git",
   "files": [
     "README.md"
   ],
