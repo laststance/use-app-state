@@ -1,5 +1,5 @@
 # muriatic [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
-Provide `useStore()` hooks as a global state.  
+Global version of a `setState()` with `useStore()`.  
 Doesn't contain every architecture.
 You don't have to learn new API/paradigm etc. if you are React dev.
 
