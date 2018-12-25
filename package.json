@@ -1,6 +1,6 @@
 {
   "name": "muriatic",
-  "version": "1.1.2",
+  "version": "1.1.333",
   "description": "Global version of a setState() with React hooks",
   "keywords": [
     "react",
