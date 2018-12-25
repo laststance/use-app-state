@@ -1,11 +1,11 @@
 # muriatic [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 Provide `useStore()` method as a global state.  
-Does't contain every architecture.
+Doesn't contain every architecture.
 You don't have to learn new API/paradigm etc. if you are React dev.
 
 ## Usage
 - if you want to get/set to Local State, you just call `useState()`
-- if you want to get/set to Global State, you just call `useStore()`(Ofcource `<Provider store={initialStore}>` setup is necessaryt though😅)
+- if you want to get/set to Global State, you just call `useStore()`(Ofcource `<Provider store={initialStore}>` setup is necessary though😅)
 
 ## Example
 
