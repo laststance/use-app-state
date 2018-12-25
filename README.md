@@ -8,6 +8,7 @@ You don't have to learn new API/paradigm etc. if you are React dev.
 - if you want to get/set to Global State, you just call `useStore()`
 
 ## Example
+[Live Demo](https://muriatic.netlify.com/) 
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
