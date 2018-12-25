@@ -4,7 +4,9 @@ Doesn't contain every architecture.
 You don't have to learn new API/paradigm etc. if you are React dev.
 
 ## Install
-`yarn add muriatic`
+`yarn add muriatic`  
+`yarn add react@16.7.0-alpha.2 react-dom@16.7.0-alpha.2`
+・
 
 ## Example
 [Live Demo](https://muriatic.netlify.com/) and [repo](https://github.com/ryota-murakami/muriatic-exampe)
