@@ -1,13 +1,11 @@
 # muriatic [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
-aaaaaaaaa
-gggggggggg
-eeeeeeeeeeeee
-Provide `useStore()` method as a global state.
-it does't contain architecture 
+Provide `useStore()` method as a global state.  
+it does't contain every architecture.
+You don't have to learn new API/paradigm. if you are React dev.
 
 ## Usage
-- if you
--
+- if you want to get/set to local State, you just call `useState()`
+if you want to get/set to local State, you just `useState()`
 
 ## Example
 
