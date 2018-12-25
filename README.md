@@ -1,6 +1,15 @@
-# muriatic [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+# muriatic [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)\
+aaaaaaaaa
+gggggggggg
+eeeeeeeeeeeee
+Provide `useStore()` method as a global state.
+it does't contain architecture 
 
 ## Usage
+- if you
+-
+
+## Example
 
 ```js
 import React from 'react'
@@ -36,7 +45,7 @@ function App() {
 ```
 
 ## API
-refer [Usage](https://github.com/ryota-murakami/muriatic/edit/master/README.md), THere is no nothig else.
+refer [Example](https://github.com/ryota-murakami/muriatic/edit/master/Example), THere is no nothig else.
 
 ## 
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
