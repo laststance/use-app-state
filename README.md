@@ -3,12 +3,11 @@ Provide `useStore()` hooks as a global state.
 Doesn't contain every architecture.
 You don't have to learn new API/paradigm etc. if you are React dev.
 
-## Usage
-- if you want to get/set to Local State, you just call `useState()`
-- if you want to get/set to Global State, you just call `useStore()`
+## Install
+`yarn add muriatic`
 
 ## Example
-[Live Demo](https://muriatic.netlify.com/) 
+[Live Demo](https://muriatic.netlify.com/) and [repo](https://github.com/ryota-murakami/muriatic-exampe)
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -42,9 +41,11 @@ function App() {
 }
 ```
 
-## API
-refer [Example](https://github.com/ryota-murakami/muriatic/edit/master/Example), THere is no nothig else.
+## Usage
+- if you want to get/set to Local State, you just call `useState()`
+- if you want to get/set to Global State, you just call `useStore()`
 
+Here is no anying else.
 
 ## LICENSE
 MIT
