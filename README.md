@@ -37,9 +37,9 @@ function App() {
 ```
 
 ## API
-See 
+refer [Usage](https://github.com/ryota-murakami/muriatic/edit/master/README.md), THere is no nothig else.
 
-## Contributors
+## 
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 
