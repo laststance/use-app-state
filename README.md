@@ -5,10 +5,9 @@ You don't have to learn new API/paradigm etc. if you are React dev.
 
 ## Usage
 - if you want to get/set to Local State, you just call `useState()`
-- if you want to get/set to Global State, you just call `useStore()`(Ofcource `<Provider store={initialStore}>` setup is necessary though😅)
+- if you want to get/set to Global State, you just call `useStore()`
 
 ## Example
-
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -25,7 +24,7 @@ ReactDOM.render(
 )
 
 function App() {
-  const { store, setStore } = useStore()
+  const { store, setStore } = useStore() // store is plain object for grobal state. anytime enable to access like store.count
 
   const inrement = () => setStore({ count: store.count + 1 })
   const decrement = () => setStore({ count: store.count - 1 })
@@ -44,9 +43,6 @@ function App() {
 
 ## API
 refer [Example](https://github.com/ryota-murakami/muriatic/edit/master/Example), THere is no nothig else.
-
-## 
-Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 
 ## LICENSE
