@@ -1,11 +1,10 @@
 # muriatic [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
-Global version of a `setState()` with `useStore()`.  
-Doesn't contain every architecture.
-You don't have to learn new API/paradigm etc. if you are React dev.
+React Global version of a `setState()` with `useStore()`.  
 
 ## Usage
-[Live Demo](https://muriatic.netlify.com/) and [repo](https://github.com/ryota-murakami/muriatic-exampe)  
-m
+Bellow example showing all API(`import Provider, { useStore } from 'muriatic'`) that's it.  
+[Live Demo](https://muriatic.netlify.com/) and [repo](https://github.com/ryota-murakami/muriatic-exampe)
+
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
