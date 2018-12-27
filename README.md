@@ -3,11 +3,9 @@ Global version of a `setState()` with `useStore()`.
 Doesn't contain every architecture.
 You don't have to learn new API/paradigm etc. if you are React dev.
 
-## Install
-`yarn add muriatic`
-
-## Example
-[Live Demo](https://muriatic.netlify.com/) and [repo](https://github.com/ryota-murakami/muriatic-exampe)
+## Usage
+[Live Demo](https://muriatic.netlify.com/) and [repo](https://github.com/ryota-murakami/muriatic-exampe)  
+m
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -41,11 +39,12 @@ function App() {
 }
 ```
 
-## Usage
-- if you want to get/set to Local State, you just call `useState()`
-- if you want to get/set to Global State, you just call `useStore()`
-
-Here is no anying else.
+## Install
+```
+yarn add muriatic
+yarn add react@16.7.0-alpha.2 react-dom@16.7.0-alpha.2
+```
+⚠️ In this time,(2018 Dec 26) hooks is only available for alpha ver.
 
 ## LICENSE
 MIT
