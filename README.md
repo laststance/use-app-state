@@ -3,7 +3,7 @@ React Global version of a `setState()` with `useStore()`.
 
 ## Usage
 Bellow example showing all API(`import Provider, { useStore } from 'muriatic'`) that's it.  
-<a href="https://muriatic.netlify.com/" target="blank">Live Demo</a> and [repo](https://github.com/ryota-murakami/muriatic-exampe)
+<a href="https://muriatic.netlify.com/" target="_blank">Live Demo</a> and [repo](https://github.com/ryota-murakami/muriatic-exampe)
 
 ```js
 import React from 'react'
