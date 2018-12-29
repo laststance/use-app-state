@@ -1,5 +1,5 @@
 # muriatic [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
-React Global version of a `setState()` with `useStore()`.  
+Global version of a setState() with React hooks. 
 
 ## Usage
 Bellow example showing all API(`import Provider, { useStore } from 'muriatic'`) that's it.  
