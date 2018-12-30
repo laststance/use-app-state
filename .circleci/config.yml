@@ -15,8 +15,7 @@ jobs:
     steps:
     - checkout
     - run: yarn install
-    - run: yarn test:cov
-    - run: yarn codecov
+    - run: yarn test
   lint:
     docker:
     - image: circleci/node:9.11.1
