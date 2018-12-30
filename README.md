@@ -45,11 +45,76 @@ function App() {
 [Live Demo](https://muriatic.netlify.com/)
 
 ## Install
+On your React project root directory, run bellow yarn commands.
+
 ```
 yarn add muriatic
 yarn add react@16.7.0-alpha.2 react-dom@16.7.0-alpha.2
 ```
+
 ⚠️ In this time,(2018 Dec 26) hooks is only available for alpha ver.
+
+## Advanced
+Bellow Example create one [custom Hooks](https://reactjs.org/docs/hooks-custom.html) and using it.
+As a result, each onClick behavior was split to `src/actions.js` and categoized `action`.
+
+- src/index.js
+```js
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Provider, { useStore } from 'muriatic'
+import { Layout } from './style'
+import useAction from './actions'
+
+const initialStore = { count: 0 }
+ReactDOM.render(
+  <Provider store={initialStore}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)
+
+function App() {
+  const action = useAction()
+  return (
+    <Layout>
+      <div>
+        <button onClick={action.inrement}>increment</button>
+        <button onClick={action.decrement}>decrement</button>
+      </div>
+      <p>{useStore().store.count}</p>
+    </Layout>
+  )
+}
+```
+
+- src/actions.js
+```js
+import { useStore } from 'muriatic'
+
+function useAction() {
+  const { store, setStore } = useStore()
+
+  const Action = {}
+  Action.inrement = () => setStore({ count: store.count + 1 })
+  Action.decrement = () => setStore({ count: store.count - 1 })
+
+  return Action
+}
+
+export default useAction
+```
+
+#### Afterword
+
+In `src/actions.js`, I made `useAction()`.
+muriatic is `Actionless` State Management Library therefoere I made a hook under the generally familiar name of `Action `.
+That code implove steps only use hooks without extearnal library.  
+
+When before hooks generally coding flow is **Naming Action** -> "**mplelentation Logic**.  
+but correct naming is hard or impossible.  
+Fortunately Above `useAction()`'s coding flow is **Implelentation Logic** -> **Naming**.    
+I calling that `Lazymaning` it similar way to prototyping on CodeNaming.
 
 ## LICENSE
 MIT
