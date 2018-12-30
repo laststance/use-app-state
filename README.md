@@ -2,8 +2,11 @@
 Global version of a setState() with React hooks. 
 
 ## Usage
-Bellow example showing all API(`import Provider, { useStore } from 'muriatic'`) that's it.  
-[Live Demo](https://muriatic.netlify.com/) and [repo](https://github.com/ryota-murakami/muriatic-exampe)
+In Bellow example, muriatic exposing all API and usecase.Please keep this in mind `initialStore` must be Plain Object.  
+Also this Library using `Store` word as a so-called Global Store.
+
+If you don't have strong knowledge of React, muriatic doesn't contain complicated mechanism.
+I wish many people to enjoy software development using React.
 
 ```js
 import React from 'react'
@@ -11,6 +14,7 @@ import ReactDOM from 'react-dom'
 import { Layout } from './style'
 import Provider, { useStore } from 'muriatic'
 
+// initialStore must be Plain Object
 const initialStore = { count: 0 }
 
 ReactDOM.render(
@@ -37,6 +41,8 @@ function App() {
   )
 }
 ```
+
+[Live Demo](https://muriatic.netlify.com/)
 
 ## Install
 ```
