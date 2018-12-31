@@ -1,5 +1,6 @@
 # muriatic [![CircleCI](https://circleci.com/gh/ryota-murakami/muriatic.svg?style=svg)](https://circleci.com/gh/ryota-murakami/muriatic) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
-Global version of a `setState()` with React hooks. 
+
+> Global version of a `setState()` with React hooks. 
 
 ## Usage
 In Bellow example, muriatic exposing all API and usecase.Please keep this in mind `initialStore` must be Plain Object.  
