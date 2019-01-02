@@ -1,12 +1,12 @@
 # muriatic [![CircleCI](https://circleci.com/gh/ryota-murakami/muriatic.svg?style=svg)](https://circleci.com/gh/ryota-murakami/muriatic) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
-> Global version of a `setState()` with React hooks. 
+> Instant Entire State Management with React hooks
 
 ## Usage
 In Bellow example, muriatic exposing all API and usecase.Please keep this in mind `initialStore` must be Plain Object.  
-Also this Library using `Store` word as a so-called Global Store.
+Also this Library using `Store` word as a so-called Entire State which above between Components.
 
-If you don't have strong knowledge of React, muriatic doesn't contain complicated mechanism.
+If you don't have strong knowledge of React, it doensn't matter. muriatic doesn't contain complicated mechanism.
 I wish many people to enjoy software development using React.
 
 ```js
@@ -56,8 +56,7 @@ yarn add react@16.7.0-alpha.2 react-dom@16.7.0-alpha.2
 ⚠️ In this time,(2018 Dec 26) hooks is only available for alpha ver.
 
 ## Advanced
-Bellow Example create one [custom Hooks](https://reactjs.org/docs/hooks-custom.html) and using it.
-As a result, each onClick behavior was split to `src/actions.js` and categoized `action`.
+This is action abstraction example utilize [custom Hooks](https://reactjs.org/docs/hooks-custom.html).
 
 - src/index.js
 ```js
@@ -105,17 +104,6 @@ function useAction() {
 
 export default useAction
 ```
-
-#### Afterword
-
-In `src/actions.js`, I made `useAction()`.
-muriatic is `Actionless` State Management Library therefoere I made a hook under the generally familiar name of `Action `.
-That code implove steps only use hooks without extearnal library.  
-
-When before hooks generally coding flow is **Naming Action** -> "**mplelentation Logic**.  
-but correct naming is hard or impossible.  
-Fortunately Above `useAction()`'s coding flow is **Implelentation Logic** -> **Naming**.    
-I calling that `Lazymaning` it similar way to prototyping on CodeNaming.
 
 ## LICENSE
 MIT
