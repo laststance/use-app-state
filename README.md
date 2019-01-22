@@ -9,6 +9,8 @@ This Library using `Store` word as a Entire State which above between Components
 If you don't have strong knowledge of React, it doensn't matter. muriatic doesn't contain complicated mechanism.
 I wish many people to enjoy software development using React.
 
+### [Demo](https://muriatic.netlify.com/)
+
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -42,8 +44,6 @@ function App() {
   )
 }
 ```
-
-[Live Demo](https://muriatic.netlify.com/)
 
 ## Install
 On your React project root directory, run bellow yarn commands.
