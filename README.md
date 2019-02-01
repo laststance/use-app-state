@@ -2,14 +2,16 @@
 
 > Entire State Management Instantly with React hooks.
 
+
+## [Demo](https://muriatic.netlify.com/)
+![](muriatic.gif)
+
 ## Usage
 In bellow example, muriatic exposing all API and usecase. Please keep this in mind `initialStore` must be Plain Object.  
 This Library using `Store` word as a Entire State which above between Components.
 
 If you don't have strong knowledge of React, it doensn't matter. muriatic doesn't contain complicated mechanism.
 I wish many people to enjoy software development using React.
-
-### [Demo](https://muriatic.netlify.com/)
 
 ```js
 import React from 'react'
