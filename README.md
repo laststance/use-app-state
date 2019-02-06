@@ -102,8 +102,6 @@ yarn add muriatic
 yarn add react@16.7.0-alpha.2 react-dom@16.7.0-alpha.2
 ```
 
-⚠️ least alpha is `16.8.0-alpha.1` (update: 2/1/2019)
-
 ## Advanced
 This is action abstraction example utilize [custom Hooks](https://reactjs.org/docs/hooks-custom.html).
 
