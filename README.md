@@ -1,17 +1,64 @@
 # muriatic [![CircleCI](https://circleci.com/gh/ryota-murakami/muriatic.svg?style=svg)](https://circleci.com/gh/ryota-murakami/muriatic) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
-> Entire State Management Instantly with React hooks.
+> Entire State Management Instantly with React hooks. 
+
+## Design
+- Zero Lerning cost
+- Doen't matter strong React experience
+- Made by cutting edge feature Hooks !!
+
+## API
+### `<Provider store={Store>} />`
+Make your GrobalStore as a PlainObject.(eg: `const GlobalStaate = {foo: "bar"}`)  
+And Wrapp Provider in your root app component.
+```js
+//code <Provider store={Store>} />
+
+import Provider from 'muriatic'
+
+// initialStore must be Plain Object
+const initialStore = { count: 0 } `ReactDOM.render()`
+
+ReactDOM.render(
+  <Provider store={initialStore}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+```
+
+### `const { store, setStore } = useStore()`
+You have to import top of file like this `import { useStore } from 'muriatic'` 
+
+You can scll useStore() only into the functional compoment body,
+and then recive 2 value witch is **store** **setState**  variable on destructuring objects.
+Please fllowing example.
+
+### `store`
+```js
+const AppleComponent = () => {
+  const {store, setStore} = useStore()
+  
+  rieturn (<div><{store.faavGame}/div>) // output <div><God Of War3/div> 
+}
+```
+
+### `setStore()`
+
+```js
+const NINTENDOComponent = () => {
+  const {store, setStore} = useStore()
+  const orderSmashBros = () => setStore({sales: store.sales + 1 })
+  
+  rieturn (<button onClick={orderSmashBros}>Your can not wait!!</button>)
+}
+```
 
 
 ## [Demo](https://muriatic.netlify.com/)
 ![](muriatic.gif)
 
-## Usage
-In bellow example, muriatic exposing all API and usecase. Please keep this in mind `initialStore` must be Plain Object.  
-This Library using `Store` word as a Entire State which above between Components.
-
-If you don't have strong knowledge of React, it doensn't matter. muriatic doesn't contain complicated mechanism.
-I wish many people to enjoy software development using React.
+## FULLCode of DEMO
+In avobe example, muriatic exposing all API and usecase. Please keep this in mind `initialStore` must be Plain Object.  
 
 ```js
 import React from 'react'
@@ -41,7 +88,7 @@ function App() {
         <button onClick={inrement}>increment</button>
         <button onClick={decrement}>decrement</button>
       </div>
-      <p>{store.count}</p>
+      <p>I have {store.apple.count} apple </p>
     </Layout>
   )
 }
