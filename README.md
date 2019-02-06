@@ -5,7 +5,10 @@
 ## Design
 - Zero Lerning cost
 - Doen't matter strong React experience
-- Made by cutting edge feature Hooks !!
+- Made by cutting edge feature **Hooks** !!
+
+## [Demo](https://muriatic.netlify.com/)
+![](muriatic.gif)
 
 ## API
 ### `<Provider store={Store>} />`
@@ -52,10 +55,6 @@ const NINTENDOComponent = () => {
   rieturn (<button onClick={orderSmashBros}>Your can not wait!!</button>)
 }
 ```
-
-
-## [Demo](https://muriatic.netlify.com/)
-![](muriatic.gif)
 
 ## FULLCode of DEMO
 In avobe example, muriatic exposing all API and usecase. Please keep this in mind `initialStore` must be Plain Object.  
