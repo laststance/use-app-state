@@ -98,7 +98,7 @@ On your React project root directory, run bellow yarn commands.
 
 ```
 yarn add muriatic
-yarn add react@16.7.0-alpha.2 react-dom@16.7.0-alpha.2
+yarn add react react-dom
 ```
 
 ## Advanced
