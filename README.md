@@ -5,7 +5,7 @@
 ## Design
 - Zero Lerning cost
 - Doen't matter strong React experience
-- Made by cutting edge feature **Hooks** !!
+- Made by cutting edge feature **Hooks !!**
 
 ## [Demo](https://muriatic.netlify.com/)
 ![](muriatic.gif)
