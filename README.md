@@ -20,7 +20,7 @@ And Wrapp Provider in your root app component.
 import Provider from 'muriatic'
 
 // initialStore must be Plain Object
-const initialStore = { count: 0 } `ReactDOM.render()`
+const initialStore = { count: 0 }
 
 ReactDOM.render(
   <Provider store={initialStore}>
