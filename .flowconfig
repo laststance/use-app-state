@@ -9,6 +9,5 @@
 [options]
 suppress_comment=.*\\$FlowFixMe
 suppress_comment=.*\\$FlowIssue
-no_flowlib=true
 
 [strict]
