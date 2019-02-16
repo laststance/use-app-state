@@ -5,7 +5,10 @@
 ## Design
 - Zero Lerning cost
 - Doen't matter strong React experience
-- Made by cutting edge feature Hooks !!
+- Made by cutting edge feature **Hooks !!**
+
+## [Demo](https://muriatic.netlify.com/)
+![](muriatic.gif)
 
 ## API
 ### `<Provider store={Store>} />`
@@ -17,7 +20,7 @@ And Wrapp Provider in your root app component.
 import Provider from 'muriatic'
 
 // initialStore must be Plain Object
-const initialStore = { count: 0 } `ReactDOM.render()`
+const initialStore = { count: 0 }
 
 ReactDOM.render(
   <Provider store={initialStore}>
@@ -52,10 +55,6 @@ const NINTENDOComponent = () => {
   rieturn (<button onClick={orderSmashBros}>Your can not wait!!</button>)
 }
 ```
-
-
-## [Demo](https://muriatic.netlify.com/)
-![](muriatic.gif)
 
 ## FULLCode of DEMO
 In avobe example, muriatic exposing all API and usecase. Please keep this in mind `initialStore` must be Plain Object.  
@@ -99,7 +98,7 @@ On your React project root directory, run bellow yarn commands.
 
 ```
 yarn add muriatic
-yarn add react@16.7.0-alpha.2 react-dom@16.7.0-alpha.2
+yarn add react react-dom
 ```
 
 ## Advanced
