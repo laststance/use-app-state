@@ -1,63 +1,11 @@
 # muriatic [![CircleCI](https://circleci.com/gh/ryota-murakami/muriatic.svg?style=svg)](https://circleci.com/gh/ryota-murakami/muriatic) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
-> Entire State Management Instantly with React hooks. 
+> Plain Entire State Management with React hooks. 
 
-## Design
-- Zero Lerning cost
-- Doen't matter strong React experience
-- Made by cutting edge feature **Hooks !!**
+[![](muriatic.gif)](https://muriatic.netlify.com/)
 
-## [Demo](https://muriatic.netlify.com/)
-![](muriatic.gif)
-
-## API
-### `<Provider store={Store>} />`
-Make your GrobalStore as a PlainObject.(eg: `const GlobalStaate = {foo: "bar"}`)  
-And Wrapp Provider in your root app component.
-```js
-//code <Provider store={Store>} />
-
-import Provider from 'muriatic'
-
-// initialStore must be Plain Object
-const initialStore = { count: 0 }
-
-ReactDOM.render(
-  <Provider store={initialStore}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
-```
-
-### `const { store, setStore } = useStore()`
-You have to import top of file like this `import { useStore } from 'muriatic'` 
-
-You can scll useStore() only into the functional compoment body,
-and then recive 2 value witch is **store** **setState**  variable on destructuring objects.
-Please fllowing example.
-
-### `store`
-```js
-const AppleComponent = () => {
-  const {store, setStore} = useStore()
-  
-  rieturn (<div><{store.faavGame}/div>) // output <div><God Of War3/div> 
-}
-```
-
-### `setStore()`
-
-```js
-const NINTENDOComponent = () => {
-  const {store, setStore} = useStore()
-  const orderSmashBros = () => setStore({sales: store.sales + 1 })
-  
-  rieturn (<button onClick={orderSmashBros}>Your can not wait!!</button>)
-}
-```
-
-## FULLCode of DEMO
-In avobe example, muriatic exposing all API and usecase. Please keep this in mind `initialStore` must be Plain Object.  
+## One File Demo
+In avobe example, muriatic exposing all API and usecase. Please keep in mind `initialStore` must be Plain Object.  
 
 ```js
 import React from 'react'
@@ -76,7 +24,7 @@ ReactDOM.render(
 )
 
 function App() {
-  const { store, setStore } = useStore() // store is plain object for grobal state. anytime enable to access like store.count
+  const { store, setStore } = useStore()
 
   const inrement = () => setStore({ count: store.count + 1 })
   const decrement = () => setStore({ count: store.count - 1 })
@@ -93,12 +41,57 @@ function App() {
 }
 ```
 
-## Install
+## Installation
 On your React project root directory, run bellow yarn commands.
 
 ```
 yarn add muriatic
 yarn add react react-dom
+```
+
+## API
+### `<Provider store={Store>} />`
+Make your GrobalStore as a PlainObject.(eg: `const GlobalStaate = {foo: "bar"}`)  
+And Wrapp Provider in your root app component.
+```js
+import Provider from 'muriatic'
+
+// initialStore must be Plain Object
+const initialStore = { count: 0 }
+
+ReactDOM.render(
+  <Provider store={initialStore}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+```
+
+### `const { store, setStore } = useStore()`
+You have to import top of file like this `import { useStore } from 'muriatic'` 
+
+You can use useStore() only into the body of Function Components.
+And then you recive 2 value witch is **store** **setState**  variables named by [Object destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring).
+
+### `store: Object`
+
+```js
+const AppleComponent = () => {
+  const {store, setStore} = useStore()
+  
+  rieturn (<div><{store.faavGame}/div>) // output <div><God Of War3/div> 
+}
+```
+
+### `setStore(store: Object)`
+Update store to argument value.
+
+```js
+const NINTENDOComponent = () => {
+  const {store, setStore} = useStore()
+  const orderSmashBros = () => setStore({sales: store.sales + 1 })
+  
+  rieturn (<button onClick={orderSmashBros}>Your can not wait!!</button>)
+}
 ```
 
 ## Advanced
