@@ -2,7 +2,8 @@
   "extends": "react-app",
   "parser": "babel-eslint",
   "plugins": [
-    "prettier"
+    "prettier",
+    "react-hooks"
   ],
   "rules": {
     "prettier/prettier": [
@@ -16,6 +17,7 @@
     "jsx-a11y/href-no-hash": "off",
     "no-unused-vars": [
       "error"
-    ]
+    ],
+    "react-hooks/rules-of-hooks": "error"
   }
 }
