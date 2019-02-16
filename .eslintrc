@@ -6,18 +6,9 @@
     "react-hooks"
   ],
   "rules": {
-    "prettier/prettier": [
-      "warn",
-      {
-        "singleQuote": true,
-        "semi": false,
-        "parser": "flow"
-      }
-    ],
+    "prettier/prettier": [ "warn", { "singleQuote": true, "semi": false, "parser": "flow" } ],
     "jsx-a11y/href-no-hash": "off",
-    "no-unused-vars": [
-      "error"
-    ],
+    "no-unused-vars": [ "error" ],
     "react-hooks/rules-of-hooks": "error"
   }
 }
