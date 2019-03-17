@@ -12,6 +12,7 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "index.d.ts",
+  "workspace": ["example"],
   "files": [
     "lib",
     "es",
