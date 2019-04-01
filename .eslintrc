@@ -9,6 +9,7 @@
     "prettier/prettier": [ "warn", { "singleQuote": true, "semi": false, "parser": "flow" } ],
     "jsx-a11y/href-no-hash": "off",
     "no-unused-vars": [ "error" ],
-    "react-hooks/rules-of-hooks": "error"
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }
