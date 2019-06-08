@@ -42,7 +42,7 @@ test(`work fine with PlainObject Store`, () => {
   expect(tree).toMatchSnapshot()
 })
 
-test(`doesn't work exept PlainObject`, () => {
+test(`doesn't work without PlainObject`, () => {
   expect(() => renderElm(1)).toThrowError(
     'muriatic: Expected the Store to be a PlainObject'
   )
