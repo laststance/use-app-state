@@ -17,7 +17,8 @@ export default function Provider(props: Props) {
 
   // "tmpStore" role is avoid name collision "store"
   const [tmpStore, setState] = useState(store)
-  const setStore = (state: Object) => {
+
+  const setStore: Function = (state: Object) => {
     if (!isPlainObject(state)) {
       throw new Error(
         'muriatic: Expected the setStore() argument to be a PlainObject'
