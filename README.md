@@ -67,10 +67,10 @@ ReactDOM.render(
 ```
 
 ### `const [store, setStore] = useStore()`
-You have to import top of file like this `import { useStore } from 'muriatic'` 
 
-You can use useStore() only into the body of Function Components.
-And then you recive 2 value witch is **store** **setState**  variables named by [Object destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring).
+This is completely similar to React built-in hook such as [useState()](https://reactjs.org/docs/hooks-overview.html#state-hook).  
+`store` left value is store object.
+And `setStore` right value is update function.
 
 ### `store: Object`
 
