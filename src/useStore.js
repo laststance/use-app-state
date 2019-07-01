@@ -2,4 +2,7 @@
 import { useContext } from 'react'
 import Context from './Context'
 
-export default () => useContext(Context)
+export default function useStore() {
+  const { store, setStore } = useContext(Context)
+  return [store, setStore]
+}

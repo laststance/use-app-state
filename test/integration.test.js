@@ -6,7 +6,7 @@ import 'jest-dom/extend-expect'
 afterEach(cleanup)
 
 const Receiver = () => {
-  const { store, setStore } = useStore()
+  const [store, setStore] = useStore()
 
   const clickCount = () => setStore({ count: store.count + 1 })
 

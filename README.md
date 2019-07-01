@@ -24,7 +24,7 @@ ReactDOM.render(
 )
 
 function App() {
-  const { store, setStore } = useStore()
+  const [store, setStore] = useStore()
 
   const inrement = () => setStore({ count: store.count + 1 })
   const decrement = () => setStore({ count: store.count - 1 })
@@ -66,7 +66,7 @@ ReactDOM.render(
   document.getElementById('root')
 ```
 
-### `const { store, setStore } = useStore()`
+### `const [store, setStore] = useStore()`
 You have to import top of file like this `import { useStore } from 'muriatic'` 
 
 You can use useStore() only into the body of Function Components.
@@ -132,7 +132,7 @@ function App() {
 import { useStore } from 'muriatic'
 
 function useAction() {
-  const { store, setStore } = useStore()
+  const [store, setStore] = useStore()
 
   const Action = {}
   Action.inrement = () => setStore({ count: store.count + 1 })

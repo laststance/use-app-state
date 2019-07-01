@@ -28,6 +28,7 @@
     "lint": "yarn eslint src",
     "lint:fix": "yarn eslint --fix src",
     "build": "rollup -c",
+    "expriment": "cp -f lib/index.js example/node_modules/muriatic/lib && cp -f es/index.js example/node_modules/muriatic/es",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"
   },

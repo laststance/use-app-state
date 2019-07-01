@@ -12,7 +12,7 @@ ReactDOM.render(
 )
 
 function App() {
-  const { store, setStore } = useStore()
+  const [store, setStore] = useStore()
   return (
     <Layout>
       <div>
