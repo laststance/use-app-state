@@ -42,11 +42,8 @@ function App() {
 ```
 
 ## Installation
-On your React project root directory, run bellow yarn commands.
-
 ```
-yarn add muriatic
-yarn add react react-dom
+npm install muriatic
 ```
 
 ## API
