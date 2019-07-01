@@ -76,7 +76,7 @@ And then you recive 2 value witch is **store** **setState**  variables named by 
 
 ```js
 const AppleComponent = () => {
-  const {store, setStore} = useStore()
+  const [store, setStore] = useStore()
   
   rieturn (<div><{store.faavGame}/div>) // output <div><God Of War3/div> 
 }
@@ -87,7 +87,7 @@ Update store to argument value.
 
 ```js
 const NINTENDOComponent = () => {
-  const {store, setStore} = useStore()
+  const [store, setStore] = useStore()
   const orderSmashBros = () => setStore({sales: store.sales + 1 })
   
   rieturn (<button onClick={orderSmashBros}>Your can not wait!!</button>)
