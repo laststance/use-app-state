@@ -2,7 +2,7 @@
 
 > Plain Entire State Management with React hooks. 
 
-[![](muriatic.gif)](https://muriatic.netlify.com/)
+[![Edit muriatic-exampe](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/muriatic-exampe-oreg7?fontsize=14)
 
 ## One File Demo
 In avobe example, muriatic exposing all API and usecase. Please keep in mind `initialStore` must be Plain Object.  
