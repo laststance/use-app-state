@@ -72,20 +72,20 @@ This is completely similar to React built-in hook such as [useState()](https://r
 `store` left value is store object.
 And `setStore` right value is update function.
 
-### `store: Object`
-
+## Get value from `store`
 ```js
+// example
 const AppleComponent = () => {
   const [store, setStore] = useStore()
   
-  rieturn (<div><{store.faavGame}/div>) // output <div><God Of War3/div> 
+  rieturn (<div><{store.thisIsMyValue}/div>)
 }
 ```
 
-### `setStore(store: Object)`
-Update store to argument value.
+### update store with `setStore(store: Object)`
 
 ```js
+// example
 const NINTENDOComponent = () => {
   const [store, setStore] = useStore()
   const orderSmashBros = () => setStore({sales: store.sales + 1 })
