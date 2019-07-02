@@ -5,5 +5,5 @@ yarn-error.log
 .prettierrc
 img
 .all-contributorsrc
-test_env
 test
+.eslintignore

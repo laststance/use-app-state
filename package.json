@@ -12,16 +12,13 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "index.d.ts",
-  "workspace": [
-    "example"
-  ],
   "files": [
     "lib",
     "es",
     "src",
     "index.d.ts"
   ],
-  "scripts": {
+  "scripts": {  
     "test": "jest --silent",
     "test:watch": "jest --watch --silent",
     "flow": "flow",
