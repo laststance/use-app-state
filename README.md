@@ -6,7 +6,7 @@
 
 [https://muriatic-demo.netlify.com/](https://muriatic.netlify.com/)
 
-## One File Demo
+## Example
 In avobe example, muriatic exposing all API and usecase. Please keep in mind `initialStore` must be Plain Object.  
 
 ```js
