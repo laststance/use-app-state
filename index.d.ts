@@ -8,15 +8,16 @@
  *~ file should be 'super-greeter/index.d.ts'
  */
 
-import { ReactChildren, ReactNode  } from 'react'
+import { ReactNode, Component  } from 'react'
 
 declare module Muriatic {
   export interface ProviderProps {
     store: Object
-    children: ReactChildren
   }
 
-  export function Provider(props: ProviderProps): ReactNode
+  export class Provider extends Component<ProviderProps> { }
 
   export function useStore(store?: Object): [Object, Function]
 }
+
+export default Muriatic.Provider
