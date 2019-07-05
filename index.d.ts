@@ -10,14 +10,14 @@
 
 import { ReactNode, Component  } from 'react'
 
-declare module Muriatic {
-  export interface ProviderProps {
-    store: Object
-  }
 
-  export class Provider extends Component<ProviderProps> { }
-
-  export function useStore(store?: Object): [Object, Function]
+export interface ProviderProps {
+  store: Object
 }
 
-export default Muriatic.Provider
+export class Provider extends Component<ProviderProps> { }
+
+export function useStore<S>(): [S, Function]
+
+
+export default Provider
