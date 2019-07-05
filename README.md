@@ -74,10 +74,12 @@ And `setStore` right value is update function.
 ## Get value from `store`
 ```js
 // example
+import { useStore } from 'muriatic'
+
 const AppleComponent = () => {
   const [store, setStore] = useStore()
   
-  rieturn (<div><{store.thisIsMyValue}/div>)
+  return (<div><{store.thisIsMyValue}/div>)
 }
 ```
 
@@ -85,11 +87,13 @@ const AppleComponent = () => {
 
 ```js
 // example
+import { useStore } from 'muriatic'
+
 const NINTENDOComponent = () => {
   const [store, setStore] = useStore()
   const orderSmashBros = () => setStore({sales: store.sales + 1 })
   
-  rieturn (<button onClick={orderSmashBros}>Your can not wait!!</button>)
+  return (<button onClick={orderSmashBros}>You can not wait!!</button>)
 }
 ```
 
