@@ -1,6 +1,6 @@
 {
   "name": "muriatic",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Plain Entire State Management with React hooks.",
   "keywords": [
     "react",
