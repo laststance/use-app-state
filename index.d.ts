@@ -1,4 +1,4 @@
-// Type definitions for [muriatic] [3.0.1]
+// Type definitions for [muriatic] [3.0.3]
 // Project: [muriatic]
 // Definitions by: [ryota-murakami] <[https://ryota-murakami.github.io]>
 
