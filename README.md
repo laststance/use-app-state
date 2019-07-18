@@ -147,6 +147,51 @@ function useAction() {
 export default useAction
 ```
 
+## TypeScript
+
+This package contains `index.d.ts` type definition file, so you can use it in TypeScript without extra setting.
+
+### Example
+
+```typescript
+import React, { ReactElement } from 'react'
+import ReactDOM from 'react-dom'
+import Provider, { useStore } from 'muriatic'
+
+interface Food {
+  id: string
+  name: string
+}
+
+type TodoList = Todo[]
+
+interface Store {
+  FoodList: FoodList
+}
+
+let initialStore: Store = {
+  foodList: []
+}
+
+const App = () => {
+const [store, setStore] = useStore<Store>() // pass store object type to generics
+const item1: Food = {id: 'j4i3t280u', name: 'Hamburger'}
+const item2: Food = {id: 'f83ja0j2t', name: 'Fried chicken'}
+setStore({foodList: [item1, item2]})
+
+const foodListView: ReactElement[] = store.foodList.map((f: Food) => <p key={f.id}>{f}</p>)
+
+return (<div>{foodListView}</div>)
+}
+
+ReactDOM.render(
+    <Provider store={initialStore}>
+      <App>
+    </Provider>,
+  document.getElementById('root')
+)
+```
+
 ## LICENSE
 MIT
 
