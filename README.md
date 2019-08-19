@@ -1,3 +1,23 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [muriatic * * * * * *](#muriatic------)
+  - [Example](#example)
+  - [Installation](#installation)
+  - [API](#api)
+    - [`<Provider store={Store>} />`](#provider-storestore-)
+    - [`const [store, setStore] = useStore()`](#const-store-setstore--usestore)
+  - [Get value from `store`](#get-value-from-store)
+    - [update store with `setStore(store: Object)`](#update-store-with-setstorestore-object)
+  - [Advanced](#advanced)
+  - [TypeScript](#typescript)
+    - [Example](#example-1)
+  - [LICENSE](#license)
+  - [Contributors](#contributors)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # muriatic [![CircleCI](https://circleci.com/gh/ryota-murakami/muriatic.svg?style=svg)](https://circleci.com/gh/ryota-murakami/muriatic) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors) [![Netlify Status](https://api.netlify.com/api/v1/badges/f98aafdd-e136-41f0-b626-23471689ff2f/deploy-status)](https://app.netlify.com/sites/muriatic/deploys)
 
 > `const [store, setStore] = useStore()` One Shot React State Management🍸
