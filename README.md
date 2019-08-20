@@ -48,14 +48,11 @@ ReactDOM.render(
 function App() {
   const [store, setStore] = useStore()
 
-  const inrement = () => setStore({ count: store.count + 1 })
-  const decrement = () => setStore({ count: store.count - 1 })
-
   return (
     <Layout>
       <div>
-        <button onClick={inrement}>increment</button>
-        <button onClick={decrement}>decrement</button>
+        <button onClick={() => setStore({ count: store.count + 1 })}>increment</button>
+        <button onClick={() => setStore({ count: store.count - 1 })}>decrement</button>
       </div>
       <p>I have {store.apple.count} apple </p>
     </Layout>
