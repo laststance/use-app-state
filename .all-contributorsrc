@@ -2,7 +2,7 @@
   "projectName": "muriatic",
   "projectOwner": "ryota-murakami",
   "repoType": "github",
-  "repoHost": "https://github.com/ryota-murakami/muriatic",
+  "repoHost": "https://github.com",
   "files": [
     "README.md"
   ],
@@ -10,15 +10,25 @@
   "commit": true,
   "contributors": [
     {
-         "login":"ryota-murakami",
-         "name":"ryota-murakami",
-         "avatar_url":"https://avatars1.githubusercontent.com/u/5501268?s=400&u=7bf6b1580b95930980af2588ef0057f3e9ec1ff8&v=4",
-         "profile":"http://ryota-murakami.github.io/",
-         "contributions":[
-            "code",
-            "doc",
-            "test"
-         ]
-      }
-  ]
+      "login": "ryota-murakami",
+      "name": "ryota-murakami",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/5501268?s=400&u=7bf6b1580b95930980af2588ef0057f3e9ec1ff8&v=4",
+      "profile": "http://ryota-murakami.github.io/",
+      "contributions": [
+        "code",
+        "doc",
+        "test"
+      ]
+    },
+    {
+      "login": "jackHedaya",
+      "name": "Jack Hedaya",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/20172754?v=4",
+      "profile": "https://github.com/jackHedaya",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
 }
