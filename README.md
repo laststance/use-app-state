@@ -68,7 +68,7 @@ npm install muriatic
 ## API
 ### `<Provider store={Store>} />`
 Make your GrobalStore as a PlainObject.(eg: `const GlobalStaate = {foo: "bar"}`)  
-And Wrapp Provider in your root app component.
+And Wrap Provider in your root app component.
 ```js
 import Provider from 'muriatic'
 
@@ -138,7 +138,7 @@ function App() {
   return (
     <Layout>
       <div>
-        <button onClick={action.inrement}>increment</button>
+        <button onClick={action.increment}>increment</button>
         <button onClick={action.decrement}>decrement</button>
       </div>
       <p>{useStore().store.count}</p>
@@ -155,7 +155,7 @@ function useAction() {
   const [store, setStore] = useStore()
 
   const Action = {}
-  Action.inrement = () => setStore({ count: store.count + 1 })
+  Action.increment = () => setStore({ count: store.count + 1 })
   Action.decrement = () => setStore({ count: store.count - 1 })
 
   return Action
