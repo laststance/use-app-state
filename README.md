@@ -8,8 +8,6 @@
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
 
   - [Example](#example)
   - [Installation](#installation)
@@ -117,7 +115,7 @@ const NINTENDOComponent = () => {
 ## Advanced
 This is action abstraction example utilize [custom Hooks](https://reactjs.org/docs/hooks-custom.html).
 
-- src/index.js
+- **src/index.js**
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -147,7 +145,7 @@ function App() {
 }
 ```
 
-- src/actions.js
+- **src/actions.js**
 ```js
 import { useStore } from 'muriatic'
 
@@ -163,6 +161,10 @@ function useAction() {
 
 export default useAction
 ```
+
+### Multiple Store
+
+[![Edit muriatic-multiple-store-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/muriatic-multiple-store-example-zwqxd?fontsize=14)
 
 ## TypeScript
 
