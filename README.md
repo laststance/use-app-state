@@ -27,35 +27,35 @@
 ## Example
 In avobe example, muriatic exposing all API and usecase. Please keep in mind `initialStore` must be Plain Object.  
 
-```js
+```diff
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Layout } from './style'
-import Provider, { useStore } from 'muriatic'
-
-// initialStore must be Plain Object
-const initialStore = { count: 0 }
-
-ReactDOM.render(
-  <Provider store={initialStore}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
-)
-
-function App() {
-  const [store, setStore] = useStore()
-
-  return (
-    <Layout>
-      <div>
-        <button onClick={() => setStore({ count: store.count + 1 })}>increment</button>
-        <button onClick={() => setStore({ count: store.count - 1 })}>decrement</button>
-      </div>
-      <p>I have {store.apple.count} apple </p>
-    </Layout>
-  )
-}
+ import { Layout } from './style'
+ import Provider, { useStore } from 'muriatic'
+ 
+ // initialStore must be Plain Object
+ const initialStore = { count: 0 }
+ 
++ReactDOM.render(
++  <Provider store={initialStore}>
++    <App />
++  </Provider>,
++  document.getElementById('root')
++)
+ 
+ function App() {
++  const [store, setStore] = useStore()
+ 
+   return (
+     <Layout>
+       <div>
++        <button onClick={() => setStore({ count: store.count + 1 })}>increment</button>
++        <button onClick={() => setStore({ count: store.count - 1 })}>decrement</button>
+       </div>
++      <p>I have {store.apple.count} apple </p>
+     </Layout>
+   )
+ }
 ```
 
 ## Installation
