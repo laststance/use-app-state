@@ -2,34 +2,12 @@
 
 > `const [store, setStore] = useStore()` One Shot React State Management🍸
 
-[![Edit muriatic-exampe](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/muriatic-exampe-oreg7?fontsize=14)
-
-[https://muriatic-demo.netlify.com/](https://muriatic.netlify.com/)
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-  - [Example](#example)
-  - [Installation](#installation)
-  - [API](#api)
-    - [`<Provider store={Store>} />`](#provider-storestore-)
-    - [`const [store, setStore] = useStore()`](#const-store-setstore--usestore)
-  - [Get value from `store`](#get-value-from-store)
-    - [update store with `setStore(store: Object)`](#update-store-with-setstorestore-object)
-  - [Advanced](#advanced)
-  - [TypeScript](#typescript)
-    - [Example](#example-1)
-  - [LICENSE](#license)
-  - [Contributors](#contributors)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Example
-In avobe example, muriatic exposing all API and usecase. Please keep in mind `initialStore` must be Plain Object.  
-
 ```diff
-import React from 'react'
-import ReactDOM from 'react-dom'
+ // Example
+ // In avobe example, muriatic exposing all API and usecase. Please keep in mind `initialStore` must be Plain Object.  
+
+ import React from 'react'
+ import ReactDOM from 'react-dom'
  import { Layout } from './style'
  import Provider, { useStore } from 'muriatic'
  
@@ -57,6 +35,27 @@ import ReactDOM from 'react-dom'
    )
  }
 ```
+
+[![Edit muriatic-exampe](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/muriatic-exampe-oreg7?fontsize=14)
+
+[https://muriatic-demo.netlify.com/](https://muriatic.netlify.com/)
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+  - [Installation](#installation)
+  - [API](#api)
+    - [`<Provider store={Store>} />`](#provider-storestore-)
+    - [`const [store, setStore] = useStore()`](#const-store-setstore--usestore)
+  - [Get value from `store`](#get-value-from-store)
+    - [update store with `setStore(store: Object)`](#update-store-with-setstorestore-object)
+  - [Advanced](#advanced)
+  - [TypeScript](#typescript)
+    - [Example](#example-1)
+  - [LICENSE](#license)
+  - [Contributors](#contributors)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Installation
 ```
