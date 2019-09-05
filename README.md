@@ -9,7 +9,7 @@
  import React from 'react'
  import ReactDOM from 'react-dom'
  import { Layout } from './style'
- import Provider, { useStore } from 'muriatic'
++import Provider, { useStore } from 'muriatic'
  
  // initialStore must be Plain Object
  const initialStore = { count: 0 }
