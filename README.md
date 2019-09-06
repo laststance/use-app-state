@@ -80,15 +80,19 @@ Also muriatic library might be heplful reduce coding time and naming tasks when 
 I guess effective for small app, prototyping, experiment etc.
 
 ## Resource
+
 - [React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#example-app): Example App [React TypeScript Todo Example 2019 Mid](https://github.com/ryota-murakami/react-typescript-todo-example-2019) created with muriatic.
 
 ## Installation
+
 ```
 npm install muriatic
 ```
 
 ## API
+
 ### `<Provider store={Store>} />`
+
 Make your GrobalStore as a PlainObject.(eg: `const GlobalStaate = {foo: "bar"}`)  
 And Wrap Provider in your root app component.
 ```js
@@ -111,6 +115,7 @@ This is completely similar to React built-in hook such as [useState()](https://r
 And `setStore` right value is update function.
 
 ## Get value from `store`
+
 ```js
 // example
 import { useStore } from 'muriatic'
@@ -137,6 +142,7 @@ const NINTENDOComponent = () => {
 ```
 
 ## Advanced
+
 This is action abstraction example utilize [custom Hooks](https://reactjs.org/docs/hooks-custom.html).
 
 - **src/index.js**
@@ -236,6 +242,7 @@ ReactDOM.render(
 ```
 
 ## LICENSE
+
 MIT
 
 ## Contributors
