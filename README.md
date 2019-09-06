@@ -81,7 +81,7 @@ I guess effective for small app, prototyping, experiment etc.
 
 ## Resource
 
-- [React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#example-app): Example App [React TypeScript Todo Example 2019 Mid](https://github.com/ryota-murakami/react-typescript-todo-example-2019) created with muriatic.
+- [React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#example-app): Example App [React TypeScript Todo Example 2019 Mid](https://github.com/ryota-murakami/react-typescript-todo-example-2019) is created with muriatic.
 
 ## Installation
 
@@ -193,6 +193,8 @@ export default useAction
 ```
 
 ### Multiple Store
+
+**・Play 👇**
 
 [![Edit muriatic-multiple-store-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/muriatic-multiple-store-example-zwqxd?fontsize=14)
 
