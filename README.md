@@ -4,47 +4,10 @@
 
 ![movie](./movie.gif)
 
-```diff
- // Example
- // In avobe example, muriatic exposing all API and usecase. Please keep in mind `initialStore` must be Plain Object.  
-
- import React from 'react'
- import ReactDOM from 'react-dom'
- import { Layout } from './style'
-+import Provider, { useStore } from 'muriatic'
- 
- // initialStore must be Plain Object
- const initialStore = { count: 0 }
- 
-+ReactDOM.render(
-+  <Provider store={initialStore}>
-+    <App />
-+  </Provider>,
-+  document.getElementById('root')
-+)
- 
- function App() {
-+  const [store, setStore] = useStore()
- 
-   return (
-     <Layout>
-       <div>
-+        <button onClick={() => setStore({ count: store.count + 1 })}>increment</button>
-+        <button onClick={() => setStore({ count: store.count - 1 })}>decrement</button>
-       </div>
-+      <p>I have {store.apple.count} apple </p>
-     </Layout>
-   )
- }
-```
-
-[![Edit muriatic-exampe](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/muriatic-exampe-oreg7?fontsize=14)
-
-[https://muriatic-demo.netlify.com/](https://muriatic.netlify.com/)
-
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+  - [Usage](#usage)
   - [Installation](#installation)
   - [API](#api)
     - [`<Provider store={Store>} />`](#provider-storestore-)
@@ -58,6 +21,46 @@
   - [Contributors](#contributors)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Usage
+
+```js
+// index.js
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Layout } from './style'
+import Provider, { useStore } from 'muriatic'
+ 
+// initialStore must be Plain Object
+const initialStore = { count: 0 }
+ 
+ReactDOM.render(
+  <Provider store={initialStore}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)
+ 
+function App() {
+  const [store, setStore] = useStore()
+
+  return (
+    <Layout>
+      <div>
+        <button onClick={() => setStore({ count: store.count + 1 })}>increment</button>
+        <button onClick={() => setStore({ count: store.count - 1 })}>decrement</button>
+      </div>
+      <p>I have {store.apple.count} apple </p>
+    </Layout>
+  )
+}
+```
+
+### Play 👇
+
+[![Edit muriatic-exampe](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/muriatic-exampe-oreg7?fontsize=14)
+
+[https://muriatic-demo.netlify.com/](https://muriatic.netlify.com/)
 
 ## Installation
 ```
