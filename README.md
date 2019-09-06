@@ -8,6 +8,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
   - [Usage](#usage)
+  - [Why](#why)
   - [Installation](#installation)
   - [API](#api)
     - [`<Provider store={Store>} />`](#provider-storestore-)
@@ -61,6 +62,21 @@ function App() {
 [![Edit muriatic-exampe](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/muriatic-exampe-oreg7?fontsize=14)
 
 [https://muriatic-demo.netlify.com/](https://muriatic.netlify.com/) Same code as above usage's one.
+
+## Why
+
+I need sharable state over the component hierarchy that can setup immediately like one shot.  
+There are bunch of similar feature library, blog posts with code example but I'm not sophisticated person.
+And I'm so lazy who feel **hard to thinking Action Name** of State Management Library.
+
+Honestly **I wanna global version of `setState()`**.
+It is really favorite API because my order is...  
+me: *I have a value so I wanna `setState()` it. ...that's it!*
+
+I made `setStore()` custom hooks based on above motivation and packing as a npm-package in order to setup one shot anywhere 🍸
+
+Also muriatic library might be heplful reduce coding time and naming tasks when Data Sharing between another components.     
+I guess effective for small app, prototyping, experiment etc.
 
 ## Installation
 ```
