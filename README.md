@@ -2,6 +2,8 @@
 
 > `const [store, setStore] = useStore()` One Shot React Data Sharing🍸
 
+![movie](./movie.gif)
+
 ```diff
  // Example
  // In avobe example, muriatic exposing all API and usecase. Please keep in mind `initialStore` must be Plain Object.  
