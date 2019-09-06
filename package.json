@@ -1,7 +1,7 @@
 {
   "name": "muriatic",
   "version": "3.0.4",
-  "description": "『const [store, setStore] = useStore()』One Shot React State Management.",
+  "description": "『const [store, setStore] = useStore()』One Shot React Data Sharing.",
   "keywords": [
     "react",
     "state",
