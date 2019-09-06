@@ -9,6 +9,7 @@
 
   - [Usage](#usage)
   - [Why](#why)
+  - [Resource](#resource)
   - [Installation](#installation)
   - [API](#api)
     - [`<Provider store={Store>} />`](#provider-storestore-)
@@ -77,6 +78,9 @@ I made `setStore()` custom hooks based on above motivation and packing as a npm-
 
 Also muriatic library might be heplful reduce coding time and naming tasks when Data Sharing between another components.     
 I guess effective for small app, prototyping, experiment etc.
+
+## Resource
+- [React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#example-app): Example App [React TypeScript Todo Example 2019 Mid](https://github.com/ryota-murakami/react-typescript-todo-example-2019) created with muriatic.
 
 ## Installation
 ```
