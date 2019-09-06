@@ -60,7 +60,7 @@ function App() {
 
 [![Edit muriatic-exampe](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/muriatic-exampe-oreg7?fontsize=14)
 
-[https://muriatic-demo.netlify.com/](https://muriatic.netlify.com/): same code to above usage's one
+[https://muriatic-demo.netlify.com/](https://muriatic.netlify.com/) Same code as above usage's one.
 
 ## Installation
 ```
