@@ -1,6 +1,6 @@
 # muriatic [![CircleCI](https://circleci.com/gh/ryota-murakami/muriatic.svg?style=svg)](https://circleci.com/gh/ryota-murakami/muriatic) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors) [![Netlify Status](https://api.netlify.com/api/v1/badges/f98aafdd-e136-41f0-b626-23471689ff2f/deploy-status)](https://app.netlify.com/sites/muriatic/deploys)
 
-> `const [store, setStore] = useStore()` One Shot React Data Sharing🍸
+> `const [store, setStore] = useStore()` One Shot React Data Sharing Built on Context 🍸
 
 ![movie](./movie.gif)
 
