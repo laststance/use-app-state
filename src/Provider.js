@@ -25,7 +25,9 @@ export default function Provider(props: Props) {
       )
     }
 
-    setState({ ...tmpStore, ...state })
+    setState(tmpStore => {
+      return { ...tmpStore, ...state }
+    })
   }
 
   return (
