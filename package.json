@@ -1,6 +1,6 @@
 {
   "name": "muriatic",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "『const [store, setStore] = useStore()』One Shot React Data Sharing Built on Context",
   "keywords": [
     "react",
