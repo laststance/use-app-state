@@ -12,7 +12,7 @@
   - [Resource](#resource)
   - [Installation](#installation)
   - [API](#api)
-    - [`<Provider store={Store>} />`](#provider-storestore-)
+    - [`<Provider store={Store} />`](#provider-storestore-)
     - [`const [store, setStore] = useStore()`](#const-store-setstore--usestore)
   - [Get value from `store`](#get-value-from-store)
     - [update store with `setStore(store: Object)`](#update-store-with-setstorestore-object)
@@ -91,7 +91,7 @@ npm install muriatic
 
 ## API
 
-### `<Provider store={Store>} />`
+### `<Provider store={Store} />`
 
 Make your GrobalStore as a PlainObject.(eg: `const GlobalStaate = {foo: "bar"}`)  
 And Wrap Provider in your root app component.
