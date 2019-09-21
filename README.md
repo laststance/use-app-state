@@ -28,9 +28,8 @@
 
 ```js
 // index.js
-import React from 'react'
+import React, { Fragment } from 'react'
 import ReactDOM from 'react-dom'
-import { Layout } from './style'
 import Provider, { useStore } from 'muriatic'
  
 // initialStore must be Plain Object
@@ -47,13 +46,13 @@ function App() {
   const [store, setStore] = useStore()
 
   return (
-    <Layout>
+    <Fragment>
       <div>
         <button onClick={() => setStore({ count: store.count + 1 })}>increment</button>
         <button onClick={() => setStore({ count: store.count - 1 })}>decrement</button>
       </div>
       <p>I have {store.apple.count} apple </p>
-    </Layout>
+    </Fragment>
   )
 }
 ```
