@@ -51,7 +51,7 @@ function App() {
         <button onClick={() => setStore({ count: store.count + 1 })}>increment</button>
         <button onClick={() => setStore({ count: store.count - 1 })}>decrement</button>
       </div>
-      <p>I have {store.apple.count} apple </p>
+      <p>I have {store.apple.count} apples </p>
     </Fragment>
   )
 }
@@ -65,35 +65,29 @@ function App() {
 
 ## Why
 
-I need sharable state over the component hierarchy that can setup immediately like one shot.  
-There are bunch of similar feature library, blog posts with code example but I'm not sophisticated person.
-And I'm so lazy who feel **hard to thinking Action Name** of State Management Library.
+I wanted a sharable state over the component hierarchy that could be setup immediately (in one shot). The goal was to have something similar to a **global version of `setState()`** with a simple interface.
 
-Honestly **I wanna global version of `setState()`**.
-It is really favorite API because my order is...  
-me: *I have a value so I wanna `setState()` it. ...that's it!*
+Although there are many similar libraries and blog posts with code examples, they tended to be unnecessarily complicated / difficult to reuse. Muriatic is awesome for prototyping, experimenting, and developing small apps.
 
-I made `setStore()` custom hooks based on above motivation and packing as a npm-package in order to setup one shot anywhere 🍸
+Now, the`setStore()` custom hook is packed it as an npm package to make setup one shot anywhere! 🍸
 
-Also muriatic library might be heplful reduce coding time and naming tasks when Data Sharing between another components.     
-I guess effective for small app, prototyping, experiment etc.
+## Resources
 
-## Resource
-
-- [React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#example-app): Example App [React TypeScript Todo Example 2019 Mid](https://github.com/ryota-murakami/react-typescript-todo-example-2019) is created with muriatic.
+- [React + TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#example-app): Example App [React TypeScript Todo Example 2019 Mid](https://github.com/ryota-murakami/react-typescript-todo-example-2019) is created with muriatic.
 
 ## Installation
 
 ```
 npm install muriatic
+yarn add muriatic
 ```
 
 ## API
 
 ### `<Provider store={Store} />`
 
-Make your GrobalStore as a PlainObject.(eg: `const GlobalStaate = {foo: "bar"}`)  
-And Wrap Provider in your root app component.
++ Make your GlobalStore as a plain Javascript Object.(eg: `const GlobalStaate = {foo: "bar"}`)  
++ Wrap Provider in your root app component.
 ```js
 import Provider from 'muriatic'
 
@@ -109,9 +103,7 @@ ReactDOM.render(
 
 ### `const [store, setStore] = useStore()`
 
-This is completely similar to React built-in hook such as [useState()](https://reactjs.org/docs/hooks-overview.html#state-hook).  
-`store` left value is store object.
-And `setStore` right value is update function.
++ Gives interface to access and set the global store.
 
 ## Get value from `store`
 
@@ -132,7 +124,7 @@ const AppleComponent = () => {
 // example
 import { useStore } from 'muriatic'
 
-const NINTENDOComponent = () => {
+const NintendoComponent = () => {
   const [store, setStore] = useStore()
   const orderSmashBros = () => setStore({sales: store.sales + 1 })
   
@@ -142,7 +134,7 @@ const NINTENDOComponent = () => {
 
 ## Advanced
 
-This is action abstraction example utilize [custom Hooks](https://reactjs.org/docs/hooks-custom.html).
+This is an abstract example utilizing [custom Hooks](https://reactjs.org/docs/hooks-custom.html).
 
 - **src/index.js**
 ```js
@@ -191,7 +183,7 @@ function useAction() {
 export default useAction
 ```
 
-### Multiple Store
+### Multiple Stores
 
 **・Play 👇**
 
@@ -199,7 +191,7 @@ export default useAction
 
 ## TypeScript
 
-This package contains `index.d.ts` type definition file, so you can use it in TypeScript without extra setting.
+This package contains an `index.d.ts` type definition file, so you can use it in TypeScript without extra configuration.
 
 ### Example
 
@@ -224,7 +216,7 @@ let initialStore: Store = {
 }
 
 const App = () => {
-const [store, setStore] = useStore<Store>() // pass store object type to generics
+const [store, setStore] = useStore<Store>() // pass store object type as generic
 const item1: Food = {id: 'j4i3t280u', name: 'Hamburger'}
 const item2: Food = {id: 'f83ja0j2t', name: 'Fried chicken'}
 setStore({foodList: [item1, item2]})
@@ -248,8 +240,8 @@ MIT
 
 ## Contributors
 
-Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
-I want to implove this library(espesialy stability), your contribute is so helpful!
+Thank you to all these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+I want to improve this library (especially stability) and your contribution is so helpful!
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
@@ -262,4 +254,4 @@ I want to implove this library(espesialy stability), your contribute is so helpf
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind are welcome!
