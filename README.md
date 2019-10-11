@@ -30,7 +30,7 @@
 // index.js
 import React, { Fragment } from 'react'
 import ReactDOM from 'react-dom'
-import Provider, { useAppState } from 'react-appstate'
+import Provider, { useAppState } from '@ryotamurakami/react-appstate'
  
 // initialAppState must be Plain Object
 const initialAppState = { count: 0 }
@@ -78,8 +78,7 @@ Now, the`setAppState()` custom hook is packed it as an npm package to make setup
 ## Installation
 
 ```
-npm install react-appstate
-yarn add react-appstate
+npm install @ryotamurakami/react-appstate
 ```
 
 ## API
@@ -89,7 +88,7 @@ yarn add react-appstate
 + Make your lAppState as a plain Javascript Object.(eg: `const GlobalStaate = {foo: "bar"}`)
 + Wrap Provider in your root app component.
 ```js
-import Provider from 'react-appstate'
+import Provider from '@ryotamurakami/react-appstate'
 
 // initialAppState must be Plain Object
 const initialAppState = { count: 0 }
@@ -109,7 +108,7 @@ ReactDOM.render(
 
 ```js
 // example
-import { useAppState } from 'react-appstate'
+import { useAppState } from '@ryotamurakami/react-appstate'
 
 const AppleComponent = () => {
   const [appState, setAppState] = useAppState()
@@ -122,7 +121,7 @@ const AppleComponent = () => {
 
 ```js
 // example
-import { useAppState } from 'react-appstate'
+import { useAppState } from '@ryotamurakami/react-appstate'
 
 const NintendoComponent = () => {
   const [appState, setAppState] = useAppState()
@@ -140,7 +139,7 @@ This is an abstract example utilizing [custom Hooks](https://reactjs.org/docs/ho
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Provider, { useAppState } from 'react-appstate'
+import Provider, { useAppState } from '@ryotamurakami/react-appstate'
 import { Layout } from './style'
 import useAction from './actions'
 
@@ -168,7 +167,7 @@ function App() {
 
 - **src/actions.js**
 ```js
-import { useAppState } from 'react-appstate'
+import { useAppState } from '@ryotamurakami/react-appstate'
 
 function useAction() {
   const [appState, setAppState] = useAppState()
@@ -198,7 +197,7 @@ This package contains an `index.d.ts` type definition file, so you can use it in
 ```typescript
 import React, { ReactElement } from 'react'
 import ReactDOM from 'react-dom'
-import Provider, { useAppState } from 'react-appstate'
+import Provider, { useAppState } from '@ryotamurakami/react-appstate'
 
 interface Food {
   id: string

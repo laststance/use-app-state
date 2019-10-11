@@ -1,4 +1,4 @@
-// Type definitions for [muriatic] [3.0.5]
+// Type definitions for [@ryotamurakami/react-appstate] [1.0.0]
 // Project: [muriatic]
 // Definitions by: [ryota-murakami] <[https://ryota-murakami.github.io]>
 
@@ -12,12 +12,12 @@ import { ReactNode, Component  } from 'react'
 
 
 export interface ProviderProps {
-  store: Object
+  appState: Object
 }
 
 export class Provider extends Component<ProviderProps> { }
 
-export function useStore<S>(): [S, Function]
+export function useAppState<S>(): [S, Function]
 
 
 export default Provider
