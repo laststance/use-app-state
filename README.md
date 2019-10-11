@@ -1,6 +1,6 @@
 # React AppState [![CircleCI](https://circleci.com/gh/ryota-murakami/react-appstate.svg?style=svg)](https://circleci.com/gh/ryota-murakami/react-appstate) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors) [![Netlify Status](https://api.netlify.com/api/v1/badges/f98aafdd-e136-41f0-b626-23471689ff2f/deploy-status)](https://app.netlify.com/sites/react-appstate/deploys)
 
-> 🌏 React Global Store for Sharing Data between each components Built on Context.
+> 🌏 React Global AppState for Sharing Data between each components Built on Context.
 
 ![movie](./movie.gif)
 
@@ -12,10 +12,10 @@
   - [Resource](#resource)
   - [Installation](#installation)
   - [API](#api)
-    - [`<Provider appState={Store} />`](#provider-appStateappState-)
-    - [`const [appState, setStore] = useStore()`](#const-appState-setappState--useappState)
+    - [`<Provider appState={AppState} />`](#provider-appStateappState-)
+    - [`const [appState, setAppState] = useAppState()`](#const-appState-setappState--useappState)
   - [Get value from `appState`](#get-value-from-appState)
-    - [update appState with `setStore(appState: Object)`](#update-appState-with-setappStateappState-object)
+    - [update appState with `setAppState(appState: Object)`](#update-appState-with-setappStateappState-object)
   - [Advanced](#advanced)
   - [TypeScript](#typescript)
     - [Example](#example-1)
@@ -30,26 +30,26 @@
 // index.js
 import React, { Fragment } from 'react'
 import ReactDOM from 'react-dom'
-import Provider, { useStore } from 'react-appstate'
+import Provider, { useAppState } from 'react-appstate'
  
-// initialStore must be Plain Object
-const initialStore = { count: 0 }
+// initialAppState must be Plain Object
+const initialAppState = { count: 0 }
  
 ReactDOM.render(
-  <Provider appState={initialStore}>
+  <Provider appState={initialAppState}>
     <App />
   </Provider>,
   document.getElementById('root')
 )
  
 function App() {
-  const [appState, setStore] = useStore()
+  const [appState, setAppState] = useAppState()
 
   return (
     <Fragment>
       <div>
-        <button onClick={() => setStore({ count: appState.count + 1 })}>increment</button>
-        <button onClick={() => setStore({ count: appState.count - 1 })}>decrement</button>
+        <button onClick={() => setAppState({ count: appState.count + 1 })}>increment</button>
+        <button onClick={() => setAppState({ count: appState.count - 1 })}>decrement</button>
       </div>
       <p>I have {appState.apple.count} apples </p>
     </Fragment>
@@ -69,7 +69,7 @@ I wanted a sharable state over the component hierarchy that could be setup immed
 
 Although there are many similar libraries and blog posts with code examples, they tended to be unnecessarily complicated / difficult to reuse. Muriatic is awesome for prototyping, experimenting, and developing small apps.
 
-Now, the`setStore()` custom hook is packed it as an npm package to make setup one shot anywhere! 🍸
+Now, the`setAppState()` custom hook is packed it as an npm package to make setup one shot anywhere! 🍸
 
 ## Resources
 
@@ -84,24 +84,24 @@ yarn add react-appstate
 
 ## API
 
-### `<Provider appState={Store} />`
+### `<Provider appState={AppState} />`
 
-+ Make your GlobalStore as a plain Javascript Object.(eg: `const GlobalStaate = {foo: "bar"}`)  
++ Make your lAppState as a plain Javascript Object.(eg: `const GlobalStaate = {foo: "bar"}`)
 + Wrap Provider in your root app component.
 ```js
 import Provider from 'react-appstate'
 
-// initialStore must be Plain Object
-const initialStore = { count: 0 }
+// initialAppState must be Plain Object
+const initialAppState = { count: 0 }
 
 ReactDOM.render(
-  <Provider appState={initialStore}>
+  <Provider appState={initialAppState}>
     <App />
   </Provider>,
   document.getElementById('root')
 ```
 
-### `const [appState, setStore] = useStore()`
+### `const [appState, setAppState] = useAppState()`
 
 + Gives interface to access and set the global appState.
 
@@ -109,24 +109,24 @@ ReactDOM.render(
 
 ```js
 // example
-import { useStore } from 'react-appstate'
+import { useAppState } from 'react-appstate'
 
 const AppleComponent = () => {
-  const [appState, setStore] = useStore()
+  const [appState, setAppState] = useAppState()
   
   return (<div><{appState.thisIsMyValue}/div>)
 }
 ```
 
-### update appState with `setStore(appState: Object)`
+### update appState with `setAppState(appState: Object)`
 
 ```js
 // example
-import { useStore } from 'react-appstate'
+import { useAppState } from 'react-appstate'
 
 const NintendoComponent = () => {
-  const [appState, setStore] = useStore()
-  const orderSmashBros = () => setStore({sales: appState.sales + 1 })
+  const [appState, setAppState] = useAppState()
+  const orderSmashBros = () => setAppState({sales: appState.sales + 1 })
   
   return (<button onClick={orderSmashBros}>You can not wait!!</button>)
 }
@@ -140,13 +140,13 @@ This is an abstract example utilizing [custom Hooks](https://reactjs.org/docs/ho
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Provider, { useStore } from 'react-appstate'
+import Provider, { useAppState } from 'react-appstate'
 import { Layout } from './style'
 import useAction from './actions'
 
-const initialStore = { count: 0 }
+const initialAppState = { count: 0 }
 ReactDOM.render(
-  <Provider appState={initialStore}>
+  <Provider appState={initialAppState}>
     <App />
   </Provider>,
   document.getElementById('root')
@@ -160,7 +160,7 @@ function App() {
         <button onClick={action.increment}>increment</button>
         <button onClick={action.decrement}>decrement</button>
       </div>
-      <p>{useStore().appState.count}</p>
+      <p>{useAppState().appState.count}</p>
     </Layout>
   )
 }
@@ -168,14 +168,14 @@ function App() {
 
 - **src/actions.js**
 ```js
-import { useStore } from 'react-appstate'
+import { useAppState } from 'react-appstate'
 
 function useAction() {
-  const [appState, setStore] = useStore()
+  const [appState, setAppState] = useAppState()
 
   const Action = {}
-  Action.increment = () => setStore({ count: appState.count + 1 })
-  Action.decrement = () => setStore({ count: appState.count - 1 })
+  Action.increment = () => setAppState({ count: appState.count + 1 })
+  Action.decrement = () => setAppState({ count: appState.count - 1 })
 
   return Action
 }
@@ -183,7 +183,7 @@ function useAction() {
 export default useAction
 ```
 
-### Multiple Stores
+### Multiple AppStates
 
 **・Play 👇**
 
@@ -198,7 +198,7 @@ This package contains an `index.d.ts` type definition file, so you can use it in
 ```typescript
 import React, { ReactElement } from 'react'
 import ReactDOM from 'react-dom'
-import Provider, { useStore } from 'react-appstate'
+import Provider, { useAppState } from 'react-appstate'
 
 interface Food {
   id: string
@@ -207,19 +207,19 @@ interface Food {
 
 type TodoList = Todo[]
 
-interface Store {
+interface AppState {
   FoodList: FoodList
 }
 
-let initialStore: Store = {
+let initialAppState: AppState = {
   foodList: []
 }
 
 const App = () => {
-const [appState, setStore] = useStore<Store>() // pass appState object type as generic
+const [appState, setAppState] = useAppState<AppState>() // pass appState object type as generic
 const item1: Food = {id: 'j4i3t280u', name: 'Hamburger'}
 const item2: Food = {id: 'f83ja0j2t', name: 'Fried chicken'}
-setStore({foodList: [item1, item2]})
+setAppState({foodList: [item1, item2]})
 
 const foodListView: ReactElement[] = appState.foodList.map((f: Food) => <p key={f.id}>{f}</p>)
 
@@ -227,7 +227,7 @@ return (<div>{foodListView}</div>)
 }
 
 ReactDOM.render(
-    <Provider appState={initialStore}>
+    <Provider appState={initialAppState}>
       <App>
     </Provider>,
   document.getElementById('root')
