@@ -1,7 +1,7 @@
 {
-  "name": "muriatic",
+  "name": "react-appstate",
   "version": "3.0.5",
-  "description": "『const [store, setStore] = useStore()』One Shot React Data Sharing Built on Context",
+  "description": "React Global Store for Sharing Data between each components Built on Context.",
   "keywords": [
     "react",
     "state",

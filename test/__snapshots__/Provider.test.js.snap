@@ -2,27 +2,27 @@
 
 exports[`doesn't work without children 1`] = `"React.Children.only expected to receive a single React element child."`;
 
-exports[`doesn't work without giving Store 1`] = `"muriatic: Expected the Store to be a PlainObject"`;
+exports[`doesn't work without giving appState 1`] = `"react-appstate: Provider Expected the appState to be a PlainObject"`;
 
-exports[`work fine with PlainObject Store 1`] = `
+exports[`work fine with PlainObject appState 1`] = `
 <div>
   elm
 </div>
 `;
 
-exports[`work fine with PlainObject Store 2`] = `
+exports[`work fine with PlainObject appState 2`] = `
 <div>
   elm
 </div>
 `;
 
-exports[`work fine with PlainObject Store 3`] = `
+exports[`work fine with PlainObject appState 3`] = `
 <div>
   elm
 </div>
 `;
 
-exports[`work fine with PlainObject Store 4`] = `
+exports[`work fine with PlainObject appState 4`] = `
 <div>
   elm
 </div>

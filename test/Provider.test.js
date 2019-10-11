@@ -4,11 +4,11 @@ import TestRenderer from 'react-test-renderer'
 
 test(`doesn't work without children`, () => {
   expect(() =>
-    TestRenderer.create(<Provider store={{}} />)
+    TestRenderer.create(<Provider appState={{}} />)
   ).toThrowErrorMatchingSnapshot()
 })
 
-test(`doesn't work without giving Store`, () => {
+test(`doesn't work without giving appState`, () => {
   expect(() =>
     TestRenderer.create(
       <Provider>
@@ -18,14 +18,14 @@ test(`doesn't work without giving Store`, () => {
   ).toThrowErrorMatchingSnapshot()
 })
 
-const renderElm = Store =>
+const renderElm = appState =>
   TestRenderer.create(
-    <Provider store={Store}>
+    <Provider appState={appState}>
       <div>elm</div>
     </Provider>
   ).toJSON()
 
-test(`work fine with PlainObject Store`, () => {
+test(`work fine with PlainObject appState`, () => {
   var tree = renderElm({})
   expect(tree).toMatchSnapshot()
 
@@ -44,33 +44,33 @@ test(`work fine with PlainObject Store`, () => {
 
 test(`doesn't work without PlainObject`, () => {
   expect(() => renderElm(1)).toThrowError(
-    'muriatic: Expected the Store to be a PlainObject'
+    'react-appstate: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm([])).toThrowError(
-    'muriatic: Expected the Store to be a PlainObject'
+    'react-appstate: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm(new Map())).toThrowError(
-    'muriatic: Expected the Store to be a PlainObject'
+    'react-appstate: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm(new Date())).toThrowError(
-    'muriatic: Expected the Store to be a PlainObject'
+    'react-appstate: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm('string')).toThrowError(
-    'muriatic: Expected the Store to be a PlainObject'
+    'react-appstate: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm(true)).toThrowError(
-    'muriatic: Expected the Store to be a PlainObject'
+    'react-appstate: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm(undefined)).toThrowError(
-    'muriatic: Expected the Store to be a PlainObject'
+    'react-appstate: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm(null)).toThrowError(
-    'muriatic: Expected the Store to be a PlainObject'
+    'react-appstate: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm(NaN)).toThrowError(
-    'muriatic: Expected the Store to be a PlainObject'
+    'react-appstate: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm({ count: 0 })).not.toThrowError(
-    'muriatic: Expected the Store to be a PlainObject'
+    'react-appstate: Provider Expected the appState to be a PlainObject'
   )
 })

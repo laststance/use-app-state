@@ -4,37 +4,37 @@ import isPlainObject from './util/isPlainObject'
 import Context from './Context'
 
 type Props = {
-  store: Object,
+  appState: Object,
   children: React$Node
 }
 
 export default function Provider(props: Props) {
-  const { store } = props
+  const { appState } = props
 
-  if (!isPlainObject(store)) {
-    throw new Error('muriatic: Expected the Store to be a PlainObject')
+  if (!isPlainObject(appState)) {
+    throw new Error('react-appstate: Provider Expected the appState to be a PlainObject')
   }
 
-  // "tmpStore" role is avoid name collision "store"
-  const [tmpStore, setState] = useState(store)
+  // "tmpAppState" role is avoid name collision "appState"
+  const [tmpAppState, setState] = useState(appState)
 
-  const setStore: Function = (state: Object) => {
+  const setAppState: Function = (state: Object) => {
     if (!isPlainObject(state)) {
       throw new Error(
-        'muriatic: Expected the setStore() argument to be a PlainObject'
+        'react-appstate: Expected the setAppState() argument to be a PlainObject'
       )
     }
 
-    setState(tmpStore => {
-      return { ...tmpStore, ...state }
+    setState(tmpAppState => {
+      return { ...tmpAppState, ...state }
     })
   }
 
   return (
     <Context.Provider
       value={{
-        store: tmpStore,
-        setStore
+        appState: tmpAppState,
+        setAppState: setAppState
       }}
     >
       {Children.only(props.children)}

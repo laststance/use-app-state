@@ -1,6 +1,6 @@
 import Provider from './Provider'
-import useStore from './useStore'
+import useAppState from './useAppState'
 
 export default Provider
 
-export { useStore }
+export { useAppState }
