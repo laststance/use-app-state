@@ -2363,43 +2363,43 @@ declare module 'eslint/lib/testers/rule-tester.js' {
   declare module.exports: $Exports<'eslint/lib/testers/rule-tester'>;
 }
 declare module 'eslint/lib/token-store/backward-token-comment-cursor.js' {
-  declare module.exports: $Exports<'eslint/lib/token-appState/backward-token-comment-cursor'>;
+  declare module.exports: $Exports<'eslint/lib/token-store/backward-token-comment-cursor'>;
 }
 declare module 'eslint/lib/token-store/backward-token-cursor.js' {
-  declare module.exports: $Exports<'eslint/lib/token-appState/backward-token-cursor'>;
+  declare module.exports: $Exports<'eslint/lib/token-store/backward-token-cursor'>;
 }
 declare module 'eslint/lib/token-store/cursor.js' {
-  declare module.exports: $Exports<'eslint/lib/token-appState/cursor'>;
+  declare module.exports: $Exports<'eslint/lib/token-store/cursor'>;
 }
 declare module 'eslint/lib/token-store/cursors.js' {
-  declare module.exports: $Exports<'eslint/lib/token-appState/cursors'>;
+  declare module.exports: $Exports<'eslint/lib/token-store/cursors'>;
 }
 declare module 'eslint/lib/token-store/decorative-cursor.js' {
-  declare module.exports: $Exports<'eslint/lib/token-appState/decorative-cursor'>;
+  declare module.exports: $Exports<'eslint/lib/token-store/decorative-cursor'>;
 }
 declare module 'eslint/lib/token-store/filter-cursor.js' {
-  declare module.exports: $Exports<'eslint/lib/token-appState/filter-cursor'>;
+  declare module.exports: $Exports<'eslint/lib/token-store/filter-cursor'>;
 }
 declare module 'eslint/lib/token-store/forward-token-comment-cursor.js' {
-  declare module.exports: $Exports<'eslint/lib/token-appState/forward-token-comment-cursor'>;
+  declare module.exports: $Exports<'eslint/lib/token-store/forward-token-comment-cursor'>;
 }
 declare module 'eslint/lib/token-store/forward-token-cursor.js' {
-  declare module.exports: $Exports<'eslint/lib/token-appState/forward-token-cursor'>;
+  declare module.exports: $Exports<'eslint/lib/token-store/forward-token-cursor'>;
 }
 declare module 'eslint/lib/token-store/index.js' {
-  declare module.exports: $Exports<'eslint/lib/token-appState/index'>;
+  declare module.exports: $Exports<'eslint/lib/token-store/index'>;
 }
 declare module 'eslint/lib/token-store/limit-cursor.js' {
-  declare module.exports: $Exports<'eslint/lib/token-appState/limit-cursor'>;
+  declare module.exports: $Exports<'eslint/lib/token-store/limit-cursor'>;
 }
 declare module 'eslint/lib/token-store/padded-token-cursor.js' {
-  declare module.exports: $Exports<'eslint/lib/token-appState/padded-token-cursor'>;
+  declare module.exports: $Exports<'eslint/lib/token-store/padded-token-cursor'>;
 }
 declare module 'eslint/lib/token-store/skip-cursor.js' {
-  declare module.exports: $Exports<'eslint/lib/token-appState/skip-cursor'>;
+  declare module.exports: $Exports<'eslint/lib/token-store/skip-cursor'>;
 }
 declare module 'eslint/lib/token-store/utils.js' {
-  declare module.exports: $Exports<'eslint/lib/token-appState/utils'>;
+  declare module.exports: $Exports<'eslint/lib/token-store/utils'>;
 }
 declare module 'eslint/lib/util/ajv.js' {
   declare module.exports: $Exports<'eslint/lib/util/ajv'>;
