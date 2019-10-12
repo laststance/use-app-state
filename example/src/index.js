@@ -1,29 +1,29 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Provider, { useStore } from 'muriatic'
+import Provider, { useAppState } from '@ryotamurakami/react-appstate'
 import { Layout } from './style'
 
-const initialStore = { count: 0 }
+const initialAppState = { count: 0 }
 ReactDOM.render(
-  <Provider store={initialStore}>
+  <Provider appState={initialAppState}>
     <App />
   </Provider>,
   document.getElementById('root')
 )
 
 function App() {
-  const [store, setStore] = useStore()
+  const [appState, setAppState] = useAppState()
   return (
     <Layout>
       <div>
-        <button onClick={() => setStore({ count: store.count + 1 })}>
+        <button onClick={() => setAppState({ count: appState.count + 1 })}>
           increment
         </button>
-        <button onClick={() => setStore({ count: store.count - 1 })}>
+        <button onClick={() => setAppState({ count: appState.count - 1 })}>
           decrement
         </button>
       </div>
-      <p>{store.count}</p>
+      <p>{appState.count}</p>
     </Layout>
   )
 }
