@@ -2,7 +2,7 @@
 
 > 🌏 React Global AppState for Sharing Data between each components Built on Context.
 
-![movie](./movie.gif)
+<a href="https://codesandbox.io/s/react-appstate-example-oreg7" target="_blank">![movie](./movie.gif)</a>
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
