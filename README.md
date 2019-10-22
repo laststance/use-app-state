@@ -85,7 +85,7 @@ npm install @ryotamurakami/react-appstate
 
 ### `<Provider appState={AppState} />`
 
-+ Make your lAppState as a plain Javascript Object.(eg: `const GlobalStaate = {foo: "bar"}`)
++ Make your AppState as a plain Javascript Object.(eg: `const GlobalStaate = {foo: "bar"}`)
 + Wrap Provider in your root app component.
 ```js
 import Provider from '@ryotamurakami/react-appstate'
