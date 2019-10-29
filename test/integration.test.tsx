@@ -1,9 +1,7 @@
-import { cleanup, render, fireEvent } from 'react-testing-library'
+import { render, fireEvent } from '@testing-library/react'
 import React from 'react'
 import Provider, { useAppState } from '../src/index'
-import 'jest-dom/extend-expect'
-
-afterEach(cleanup)
+import '@testing-library/jest-dom/extend-expect'
 
 const Receiver = () => {
   const [appState, setAppState] = useAppState()

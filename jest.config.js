@@ -1,4 +1,5 @@
 module.exports = {
-  transform: { '^.+\\.js$': 'babel-jest' },
+  preset: 'ts-jest',
+  testRegex: '/test/.*\\.test\\.tsx$',
   testPathIgnorePatterns: ['/example/']
 }

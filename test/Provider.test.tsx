@@ -4,6 +4,8 @@ import TestRenderer from 'react-test-renderer'
 
 test(`doesn't work without children`, () => {
   expect(() =>
+    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+    // @ts-ignore Because expectend used to JavaScirpt
     TestRenderer.create(<Provider appState={{}} />)
   ).toThrowErrorMatchingSnapshot()
 })
@@ -11,6 +13,8 @@ test(`doesn't work without children`, () => {
 test(`doesn't work without giving appState`, () => {
   expect(() =>
     TestRenderer.create(
+      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+      // @ts-ignore Because expectend used to JavaScirpt
       <Provider>
         <div>elm</div>
       </Provider>
@@ -26,20 +30,20 @@ const renderElm = appState =>
   ).toJSON()
 
 test(`work fine with PlainObject appState`, () => {
-  var tree = renderElm({})
-  expect(tree).toMatchSnapshot()
+  const tree01 = renderElm({})
+  expect(tree01).toMatchSnapshot()
 
-  var tree = renderElm(new Object())
-  expect(tree).toMatchSnapshot()
+  const tree02 = renderElm(new Object())
+  expect(tree02).toMatchSnapshot()
 
-  var tree = renderElm({ name: 'mark' })
-  expect(tree).toMatchSnapshot()
+  const tree03 = renderElm({ name: 'mark' })
+  expect(tree03).toMatchSnapshot()
 
-  var tree = renderElm({
+  const tree04 = renderElm({
     chunk: { home: { oneFloor: 'spacious', twoFloor: 'narrow' } },
     array: [1, 2, 3, 4]
   })
-  expect(tree).toMatchSnapshot()
+  expect(tree04).toMatchSnapshot()
 })
 
 test(`doesn't work without PlainObject`, () => {
