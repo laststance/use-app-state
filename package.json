@@ -1,6 +1,6 @@
 {
   "name": "@ryotamurakami/react-appstate",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "React Global Store for Sharing Data between each components Built on Context.",
   "keywords": [
     "react",
@@ -9,64 +9,46 @@
   ],
   "author": "Ryota Murakami <dojce1048@gmail.com> (https://github.com/ryota-murakami)",
   "license": "MIT",
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "types": "index.d.ts",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
   "files": [
-    "lib",
-    "es",
-    "src",
-    "index.d.ts"
+    "dist/src/**"
   ],
   "scripts": {
-    "test": "jest --silent",
-    "test:watch": "jest --watch --silent",
-    "flow": "flow",
-    "lint": "yarn eslint src",
-    "lint:fix": "yarn eslint --fix src",
-    "build": "rollup -c",
-    "expriment": "cp -f lib/index.js example/node_modules/muriatic/lib && cp -f es/index.js example/node_modules/muriatic/es",
+    "test": "jest",
+    "lint": "yarn eslint src --ext .ts,.tsx",
+    "lint:fix": "yarn eslint src --ext .ts,.tsx --fix",
+    "build": "tsc",
+    "expriment": "cp -fR dist example/node_modules/@ryotamurakami/react-appstate/",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"
   },
   "peerDependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react": "16.11.0",
+    "react-dom": "16.11.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.4",
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.1.5",
-    "@babel/preset-flow": "^7.0.0",
-    "@babel/preset-react": "^7.0.0",
+    "@testing-library/jest-dom": "^4.2.0",
+    "@testing-library/react": "^9.3.0",
+    "@types/jest": "^24.0.20",
+    "@types/node": "^12.11.7",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.3",
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
     "all-contributors-cli": "^5.4.1",
-    "babel-core": "^7.0.0-bridge",
-    "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-flow": "^6.23.0",
-    "babel-preset-react": "^6.24.1",
-    "eslint": "^5.9.0",
-    "eslint-config-react-app": "^3.0.5",
-    "eslint-plugin-flowtype": "^3.2.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint": "^6.6.0",
+    "eslint-plugin-jest": "^23.0.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^1.0.2",
-    "flow-bin": "^0.86.0",
-    "jest": "^23.6.0",
-    "jest-dom": "^2.1.1",
-    "prettier": "^1.15.2",
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-test-renderer": "^16.11.0",
-    "react-testing-library": "^5.2.3",
-    "rollup": "^0.67.0",
-    "rollup-plugin-babel": "^4.0.3",
-    "rollup-plugin-node-resolve": "^3.4.0"
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.4"
   },
-  "dependencies": {
-    "@types/react": "^16.9.11"
-  }
+  "dependencies": {}
 }

@@ -1,24 +1,28 @@
-// @flow // $FlowIssue flow doesn't know hook
-import React, { useState, Children } from 'react'
+import React, { FC, useState, Children, ReactNode } from 'react'
 import isPlainObject from './util/isPlainObject'
+// eslint-disable-next-line no-unused-vars
 import Context from './Context'
 
 type Props = {
-  appState: Object,
-  children: React$Node
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  appState: Record<string, any>
+  children: ReactNode
 }
 
-export default function Provider(props: Props) {
+const Provider: FC<Props> = props => {
   const { appState } = props
 
   if (!isPlainObject(appState)) {
-    throw new Error('react-appstate: Provider Expected the appState to be a PlainObject')
+    throw new Error(
+      'react-appstate: Provider Expected the appState to be a PlainObject'
+    )
   }
 
   // "tmpAppState" role is avoid name collision "appState"
   const [tmpAppState, setState] = useState(appState)
 
-  const setAppState: Function = (state: Object) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const setAppState: Function = (state: Record<string, any>) => {
     if (!isPlainObject(state)) {
       throw new Error(
         'react-appstate: Expected the setAppState() argument to be a PlainObject'
@@ -41,3 +45,5 @@ export default function Provider(props: Props) {
     </Context.Provider>
   )
 }
+
+export default Provider

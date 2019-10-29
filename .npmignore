@@ -1,9 +1,7 @@
 .git
 .idea
 yarn-error.log
-.eslintrc
-.prettierrc
-img
-.all-contributorsrc
+movie.gif
 test
-.eslintignore
+example
+node_modules
