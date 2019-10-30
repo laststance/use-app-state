@@ -73,7 +73,7 @@ Now, the`setAppState()` custom hook is packed it as an npm package to make setup
 
 ## Resources
 
-- [React + TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#example-app): Example App [React TypeScript Todo Example 2019 Mid](https://github.com/ryota-murakami/react-typescript-todo-example-2019) is created with react-appstate.
+- [React + TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#example-app): Example App [React TypeScript Todo Example 2019](https://github.com/ryota-murakami/react-typescript-todo-example-2019) is created with react-appstate.
 
 ## Installation
 
