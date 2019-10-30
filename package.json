@@ -1,7 +1,7 @@
 {
   "name": "@ryotamurakami/react-appstate",
   "version": "1.1.0",
-  "description": "React Global Store for Sharing Data between each components Built on Context.",
+  "description": "useAppState() hook. that global version of setState() built on Context.",
   "keywords": [
     "react",
     "state",
