@@ -2,7 +2,7 @@
 
 > 🌏 React Global AppState for Sharing Data between each components Built on Context.
 
-<a href="https://codesandbox.io/s/react-appstate-example-oreg7">![movie](./movie.gif)</a>
+![top](./images/top.png)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -60,6 +60,8 @@ function App() {
 ## Play 👇
 
 [![Edit react-appstate-exampe](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-appstate-exampe-oreg7?fontsize=14)
+
+<a href="https://codesandbox.io/s/react-appstate-example-oreg7">![codesandbox](./images/codesandbox.gif)</a>
 
 [https://react-appstate-demo.netlify.com/](https://react-appstate.netlify.com/) Same code as above usage's one.
 
