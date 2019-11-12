@@ -1,6 +1,5 @@
 import React, { FC, useState, Children, ReactNode } from 'react'
 import isPlainObject from './util/isPlainObject'
-// eslint-disable-next-line no-unused-vars
 import Context from './Context'
 
 type Props = {
