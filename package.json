@@ -1,6 +1,6 @@
 {
   "name": "@ryotamurakami/react-appstate",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "useAppState() hook. that global version of setState() built on Context.",
   "keywords": [
     "react",
