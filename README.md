@@ -9,7 +9,7 @@
 
   - [Usage](#usage)
   - [Why](#why)
-  - [Resource](#resource)
+  - [Resources](#resources)
   - [Installation](#installation)
   - [API](#api)
     - [`<Provider appState={AppState} />`](#provider-appStateappState-)
