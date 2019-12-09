@@ -106,7 +106,7 @@ ReactDOM.render(
 
 + Gives interface to access and set the global appState.
 
-## Get value from `appState`
+##### Get value from `appState`
 
 ```js
 // example
@@ -119,7 +119,7 @@ const AppleComponent = () => {
 }
 ```
 
-### update appState with `setAppState(appState: Object)`
+##### update appState with `setAppState(appState: Object)`
 
 ```js
 // example
