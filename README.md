@@ -7,20 +7,24 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-  - [Usage](#usage)
-  - [Why](#why)
-  - [Resources](#resources)
-  - [Installation](#installation)
-  - [API](#api)
-    - [`<Provider appState={AppState} />`](#provider-appStateappState-)
-    - [`const [appState, setAppState] = useAppState()`](#const-appState-setappState--useappState)
-  - [Get value from `appState`](#get-value-from-appState)
-    - [update appState with `setAppState(appState: Object)`](#update-appState-with-setappStateappState-object)
-  - [Advanced](#advanced)
-  - [TypeScript](#typescript)
-    - [Example](#example-1)
-  - [LICENSE](#license)
-  - [Contributors](#contributors)
+
+- [Usage](#usage)
+- [Play 👇](#play-)
+- [Why](#why)
+- [Example App](#example-app)
+- [Articles](#articles)
+- [Installation](#installation)
+- [API](#api)
+  - [`<Provider appState={AppState} />`](#provider-appstateappstate-)
+  - [`const [appState, setAppState] = useAppState()`](#const-appstate-setappstate--useappstate)
+- [Get value from `appState`](#get-value-from-appstate)
+  - [update appState with `setAppState(appState: Object)`](#update-appstate-with-setappstateappstate-object)
+- [Advanced](#advanced)
+  - [Multiple AppStates](#multiple-appstates)
+- [TypeScript](#typescript)
+  - [Example](#example)
+- [LICENSE](#license)
+- [Contributors](#contributors)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -73,9 +77,15 @@ Although there are many similar libraries and blog posts with code examples, the
 
 Now, the`setAppState()` custom hook is packed it as an npm package to make setup one shot anywhere! 🍸
 
-## Resources
+## Example App
 
-- [React + TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#example-app): Example App [React TypeScript Todo Example 2019](https://github.com/ryota-murakami/react-typescript-todo-example-2019) is created with react-appstate.
+- At the [React + TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#example-app): Example App Section, [React TypeScript Todo Example 2019](https://github.com/ryota-murakami/react-typescript-todo-example-2019) is created with react-appstate.
+
+## Articles
+
+- [React AppState was migrated to TypeScript!](https://dev.to/malloc007/react-appstate-was-migrated-to-typescript-5746)
+- [Components Hierarchy Free setState() will be helpful people who wandering make a decision state management](https://dev.to/malloc007/components-hierarchy-free-setstate-will-be-helpful-people-who-wandering-make-a-decision-state-management-2e71)
+- [I Created React AppState! 🤗](https://dev.to/malloc007/i-created-react-appstate-2m3k)
 
 ## Installation
 
