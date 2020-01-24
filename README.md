@@ -9,7 +9,7 @@
 
 
 - [Usage](#usage)
-- [Play 👇](#play-)
+- [CodeSandbox](#codesandbox)
 - [Why](#why)
 - [Example App](#example-app)
 - [Articles](#articles)
@@ -61,7 +61,7 @@ function App() {
 }
 ```
 
-## Play 👇
+## CodeSandbox
 
 [![Edit react-appstate-exampe](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-appstate-exampe-oreg7?fontsize=14)
 
@@ -196,7 +196,7 @@ export default useAction
 
 ### Multiple AppStates
 
-**・Play 👇**
+**・CodeSandbox**
 
 [![Edit react-appstate-multiple-appState-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-appstate-multiple-appState-example-zwqxd?fontsize=14)
 
