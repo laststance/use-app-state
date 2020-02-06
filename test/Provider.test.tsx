@@ -48,33 +48,33 @@ test(`work fine with PlainObject appState`, () => {
 
 test(`doesn't work without PlainObject`, () => {
   expect(() => renderElm(1)).toThrowError(
-    'use-app-sate: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm([])).toThrowError(
-    'use-app-sate: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm(new Map())).toThrowError(
-    'use-app-sate: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm(new Date())).toThrowError(
-    'use-app-sate: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm('string')).toThrowError(
-    'use-app-sate: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm(true)).toThrowError(
-    'use-app-sate: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm(undefined)).toThrowError(
-    'use-app-sate: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm(null)).toThrowError(
-    'use-app-sate: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm(NaN)).toThrowError(
-    'use-app-sate: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the appState to be a PlainObject'
   )
   expect(() => renderElm({ count: 0 })).not.toThrowError(
-    'use-app-sate: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the appState to be a PlainObject'
   )
 })
