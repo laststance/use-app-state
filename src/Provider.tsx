@@ -13,7 +13,7 @@ const Provider: FC<Props> = props => {
 
   if (!isPlainObject(appState)) {
     throw new Error(
-      'react-appstate: Provider Expected the appState to be a PlainObject'
+      'use-app-state: Provider Expected the appState to be a PlainObject'
     )
   }
 
@@ -24,7 +24,7 @@ const Provider: FC<Props> = props => {
   const setAppState: Function = (state: Record<string, any>) => {
     if (!isPlainObject(state)) {
       throw new Error(
-        'react-appstate: Expected the setAppState() argument to be a PlainObject'
+        'use-app-sate: Expected the setAppState() argument to be a PlainObject'
       )
     }
 

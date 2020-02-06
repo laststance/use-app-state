@@ -2,7 +2,7 @@
 
 exports[`doesn't work without children 1`] = `"React.Children.only expected to receive a single React element child."`;
 
-exports[`doesn't work without giving appState 1`] = `"react-appstate: Provider Expected the appState to be a PlainObject"`;
+exports[`doesn't work without giving appState 1`] = `"use-app-state: Provider Expected the appState to be a PlainObject"`;
 
 exports[`work fine with PlainObject appState 1`] = `
 <div>
