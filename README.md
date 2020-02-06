@@ -63,11 +63,11 @@ function App() {
 
 ## Why
 
-I wanted a sharable state over the component hierarchy that could be setup immediately (in one shot). The goal was to have something similar to a **global version of `setState()`** with a simple interface.
+I wanted **just global version of `setState()`** in some projects.
+So I setup code with `useState()`and `useContext()` then export `useAppState()` hook. 
+Finaly added test, TypeScript supprt with published on npm. 🤗
 
-Although there are many similar libraries and blog posts with code examples, they tended to be unnecessarily complicated / difficult to reuse. React AppState is awesome for prototyping, experimenting, and developing small apps.
-
-Now, the`setAppState()` custom hook is packed it as an npm package to make setup one shot anywhere! 🍸
+There is no spefial things against generally kind of `useCotecxt()` hook based grrobal store.
 
 ## Installation
 
