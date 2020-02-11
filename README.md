@@ -28,7 +28,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Usage
+## 😀 Usage
 
 ```js
 // index.js
@@ -61,8 +61,13 @@ function App() {
   )
 }
 ```
+## 📺 Demo
+[![Edit use-app-state-exampe](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/use-app-state-exampe-oreg7?fontsize=14)
 
-## Why
+<a href="https://codesandbox.io/s/use-app-state-example-oreg7">![codesandbox](./images/codesandbox.gif)</a>
+
+
+## 🤔 Why
 
 I wanted **just global version of `setState()`** in some projects.
 So I setup code with `useState()`and `useContext()` then export `useAppState()` hook. 
@@ -70,13 +75,13 @@ Finaly added test, TypeScript supprt with published on npm. 🤗
 
 There is no spefial things against generally kind of `useCotecxt()` hook based grrobal store.
 
-## Installation
+## 💾 Installation
 
 ```
 npm install @laststance/use-app-state
 ```
 
-## API
+## 🛠 API
 
 ### `<Provider appState={AppState} />`
 
@@ -126,7 +131,7 @@ const NintendoComponent = () => {
 }
 ```
 
-## TypeScript
+## 😎TypeScript
 
 This package contains an `index.d.ts` type definition file, so you can use it in TypeScript without extra configuration.
 
@@ -171,12 +176,14 @@ ReactDOM.render(
 )
 ```
 
+[React TypeScript Todo Example 2020](https://github.com/laststance/react-typescript-todo-example-2020) using use-app-state so might be good example projectt.
 
-## Advanced
+
+## 🥃 Advanced
 
 This is an abstract example utilizing [custom Hooks](https://reactjs.org/docs/hooks-custom.html).
 
-### action abstraction
+### ・action abstraction
 
 - **src/index.js**
 ```js
@@ -225,29 +232,13 @@ function useAction() {
 export default useAction
 ```
 
-### Multiple AppStates
+### ・Multiple AppStates
 
 **・CodeSandbox**
 
 [![Edit use-app-state-multiple-appState-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/use-app-state-multiple-appState-example-zwqxd?fontsize=14)
 
-
-
-## CodeSandbox
-
-[![Edit use-app-state-exampe](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/use-app-state-exampe-oreg7?fontsize=14)
-
-<a href="https://codesandbox.io/s/use-app-state-example-oreg7">![codesandbox](./images/codesandbox.gif)</a>
-
-[https://use-app-state-demo.netlify.com/](https://use-app-state.netlify.com/) Same code as above usage's one.
-
-## Example App
-
-- At the [React + TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#example-app): Example App Section, [React TypeScript Todo Example 2019](https://github.com/ryota-murakami/react-typescript-todo-example-2019) is created with use-app-state.
-
-
-
-## Articles
+## 📘 Articles
 
 - [React AppState was migrated to TypeScript!](https://dev.to/malloc007/use-app-state-was-migrated-to-typescript-5746)
 - [Components Hierarchy Free setState() will be helpful people who wandering make a decision state management](https://dev.to/malloc007/components-hierarchy-free-setstate-will-be-helpful-people-who-wandering-make-a-decision-state-management-2e71)
