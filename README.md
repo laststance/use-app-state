@@ -30,7 +30,7 @@
 
 ## 😀 Usage
 
-```js
+```jsx
 // index.js
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -87,7 +87,7 @@ npm install @laststance/use-app-state
 
 + Make your AppState as a plain Javascript Object.(eg: `const GlobalStaate = {foo: "bar"}`)
 + Wrap Provider in your root app component.
-```js
+```jsx
 import Provider from '@laststance/use-app-state'
 
 // initialAppState must be Plain Object
@@ -106,20 +106,20 @@ ReactDOM.render(
 
 ##### Get value from `appState`
 
-```js
+```jsx
 // example
 import { useAppState } from '@laststance/use-app-state'
 
 const AppleComponent = () => {
   const [appState, setAppState] = useAppState()
   
-  return (<div><{appState.thisIsMyValue}/div>)
+  return (<div>{appState.thisIsMyValue}</div>)
 }
 ```
 
 ##### update appState with `setAppState(appState: Object)`
 
-```js
+```jsx
 // example
 import { useAppState } from '@laststance/use-app-state'
 
@@ -176,7 +176,7 @@ ReactDOM.render(
 )
 ```
 
-[React TypeScript Todo Example 2020](https://github.com/laststance/react-typescript-todo-example-2020) using use-app-state so might be good example projectt.
+[React TypeScript Todo Example 2020](https://github.com/laststance/react-typescript-todo-example-2020) using use-app-state so might be good example project.
 
 
 ## 🥃 Advanced
@@ -186,7 +186,7 @@ This is an abstract example utilizing [custom Hooks](https://reactjs.org/docs/ho
 ### ・action abstraction
 
 - **src/index.js**
-```js
+```jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Provider, { useAppState } from '@laststance/use-app-state'
@@ -234,8 +234,125 @@ export default useAction
 
 ### ・Multiple AppStates
 
-**・CodeSandbox**
+- **src/index.js**
+```jsx
+import React from "react";
+import ReactDOM from "react-dom";
+import DrinkList from "./DrinkList";
+import FruitsList from "./FruitsList";
 
+import "./styles.css";
+
+function App() {
+  return (
+    <div className="App">
+      <DrinkList />
+      <FruitsList />
+    </div>
+  );
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+```
+
+- **src/FruitsList.js**
+```jsx
+import React, { useRef } from "react";
+import FruitsProvider, { useAppState } from "@laststance/use-app-state";
+
+const fruitsState = {
+  fruitsList: [
+    { id: 0, name: "orange" },
+    { id: 1, name: "apple" },
+    { id: 2, name: "berry" }
+  ]
+};
+
+const App = () => (
+  <FruitsProvider appState={fruitsState}>
+    <FruitsList />
+  </FruitsProvider>
+);
+
+const FruitsList = () => {
+  const [appState, setAppState] = useAppState();
+  const button = useRef();
+
+  const addPeaches = () => {
+    appState.fruitsList.push({ id: 3, name: "peaches" });
+    setAppState(appState);
+    button.current.disabled = true;
+  };
+
+  return (
+    <div>
+      <h3>FruitsList</h3>
+      <ul>
+        {appState.fruitsList.map(f => (
+          <li key={f.id}>{f.name}</li>
+        ))}
+      </ul>
+      <button ref={button} onClick={() => addPeaches()}>
+        Add peaches
+      </button>
+    </div>
+  );
+};
+
+export default App;
+
+```
+
+- **src/DrinkList.js**
+```jsx
+import React, { useRef } from "react";
+import DrinkProvider, { useAppState } from "@laststance/use-app-state";
+
+const appState = {
+  drinkList: [
+    { id: 0, name: "water" },
+    { id: 1, name: "cola" },
+    { id: 2, name: "tea" }
+  ]
+};
+
+const App = () => (
+  <DrinkProvider appState={appState}>
+    <DrinkList />
+  </DrinkProvider>
+);
+
+const DrinkList = () => {
+  const [appSate, setAppState] = useAppState();
+  const button = useRef();
+  const drinkList = appSate.drinkList;
+
+  const addSoda = () => {
+    appSate.drinkList.push({ id: 3, name: "soda" });
+    setAppState(appSate);
+    button.current.disabled = true;
+  };
+
+  return (
+    <div>
+      <h3>DrinkList</h3>
+      <ul>
+        {drinkList.map(d => (
+          <li key={d.id}>{d.name}</li>
+        ))}
+      </ul>
+      <button ref={button} onClick={() => addSoda()}>
+        Add Soda
+      </button>
+    </div>
+  );
+};
+
+export default App;
+```
+
+Full code available on CodeSandbox.
 [![Edit use-app-state-multiple-appState-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/use-app-state-multiple-appState-example-zwqxd?fontsize=14)
 
 ## 📘 Articles
