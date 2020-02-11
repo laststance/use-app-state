@@ -175,6 +175,8 @@ ReactDOM.render(
 
 This is an abstract example utilizing [custom Hooks](https://reactjs.org/docs/hooks-custom.html).
 
+### action abstraction
+
 - **src/index.js**
 ```js
 import React from 'react'
