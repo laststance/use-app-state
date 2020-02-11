@@ -31,7 +31,7 @@
 
 ```js
 // index.js
-import React, { Fragment } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 import Provider, { useAppState } from '@laststance/use-app-state'
  
@@ -47,15 +47,16 @@ ReactDOM.render(
  
 function App() {
   const [appState, setAppState] = useAppState()
+  
+  const inclement = () => setAppState({ count: appState.count + 1 })
+  const decrement = () => setAppState({ count: appState.count - 1 })
 
   return (
-    <Fragment>
-      <div>
-        <button onClick={() => setAppState({ count: appState.count + 1 })}>increment</button>
-        <button onClick={() => setAppState({ count: appState.count - 1 })}>decrement</button>
-      </div>
+    <div>
+      <button onClick={increment}>increment</button>
+      <button onClick={decrement}>decrement</button>
       <p>I have {appState.apple.count} apples </p>
-    </Fragment>
+    </div>
   )
 }
 ```
