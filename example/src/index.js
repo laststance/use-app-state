@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Provider, { useAppState } from '@ryotamurakami/react-appstate'
+import Provider, { useAppState } from '@laststance/use-app-state'
 import { Layout } from './style'
 
 const initialAppState = { count: 0 }
