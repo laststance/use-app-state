@@ -352,7 +352,8 @@ const DrinkList = () => {
 export default App;
 ```
 
-Full code available on CodeSandbox.
+Full code available on CodeSandbox.  
+
 [![Edit use-app-state-multiple-appState-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/use-app-state-multiple-appState-example-zwqxd?fontsize=14)
 
 ## 📘 Articles
