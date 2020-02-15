@@ -9,8 +9,8 @@
 
 
 - [😀 Usage](#-usage)
-- [📺 Demo](#-demo)
 - [🤔 Why](#-why)
+- [📺 Demo](#-demo)
 - [💾 Installation](#-installation)
 - [🛠 API](#%F0%9F%9B%A0-api)
   - [`<Provider appState={AppState} />`](#provider-appstateappstate-)
@@ -61,11 +61,6 @@ function App() {
   )
 }
 ```
-## 📺 Demo
-[![Edit use-app-state-exampe](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/use-app-state-exampe-oreg7?fontsize=14)
-
-<a href="https://codesandbox.io/s/use-app-state-example-oreg7">![codesandbox](./images/codesandbox.gif)</a>
-
 
 ## 🤔 Why
 
@@ -74,6 +69,13 @@ So I setup code with `useState()`and `useContext()` then export `useAppState()` 
 Finaly added test, TypeScript supprt with published on npm. 🤗
 
 There is no spefial things against generally kind of `useCotecxt()` hook based grrobal store.
+
+
+## 📺 Demo
+[![Edit use-app-state-exampe](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/use-app-state-exampe-oreg7?fontsize=14)
+
+<a href="https://codesandbox.io/s/use-app-state-example-oreg7">![codesandbox](./images/codesandbox.gif)</a>
+
 
 ## 💾 Installation
 
