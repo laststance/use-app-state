@@ -77,8 +77,14 @@ There is no spefial things against generally kind of `useCotecxt()` hook based g
 
 ## 💾 Installation
 
-```
+```sh
 npm install @laststance/use-app-state
+```
+or
+
+```sh
+yarn add @laststance/use-app-state
+
 ```
 
 ## 🛠 API
