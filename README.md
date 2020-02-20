@@ -22,7 +22,6 @@
 - [🥃 Advanced](#-advanced)
   - [・action abstraction](#%E3%83%BBaction-abstraction)
   - [・Multiple AppStates](#%E3%83%BBmultiple-appstates)
-- [📘 Articles](#-articles)
 - [LICENSE](#license)
 - [Contributors](#contributors)
 
@@ -363,12 +362,6 @@ export default App;
 Full code available on CodeSandbox.  
 
 [![Edit use-app-state-multiple-appState-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/use-app-state-multiple-appState-example-zwqxd?fontsize=14)
-
-## 📘 Articles
-
-- [React AppState was migrated to TypeScript!](https://dev.to/malloc007/use-app-state-was-migrated-to-typescript-5746)
-- [Components Hierarchy Free setState() will be helpful people who wandering make a decision state management](https://dev.to/malloc007/components-hierarchy-free-setstate-will-be-helpful-people-who-wandering-make-a-decision-state-management-2e71)
-- [I Created React AppState! 🤗](https://dev.to/malloc007/i-created-use-app-state-2m3k)
 
 ## LICENSE
 
