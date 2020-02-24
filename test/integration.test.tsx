@@ -3,8 +3,13 @@ import React from 'react'
 import Provider, { useAppState } from '../src/index'
 import '@testing-library/jest-dom'
 
+interface AppState {
+  count?: number
+  stable?: { [key: string]: string }
+}
+
 const Receiver = () => {
-  const [appState, setAppState] = useAppState()
+  const [appState, setAppState] = useAppState<AppState>()
 
   const clickCount = () => setAppState({ count: appState.count + 1 })
 
