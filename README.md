@@ -65,9 +65,9 @@ function App() {
 
 I wanted **just global version of `setState()`** in some projects.
 So I setup code with `useState()`and `useContext()` then export `useAppState()` hook. 
-Finaly added test, TypeScript supprt with published on npm. 🤗
+Finally added test, TypeScript support with published on npm. 🤗
 
-There is no spefial things against generally kind of `useCotecxt()` hook based grrobal store.
+There is no special things against generally kind of `useContext()` hook based global store.
 
 
 ## 📺 Demo
@@ -183,7 +183,7 @@ ReactDOM.render(
 )
 ```
 
-[React TypeScript Todo Example 2020](https://github.com/laststance/react-typescript-todo-example-2020) using use-app-state so might be good example project.
+[React TypeScript Todo Example 2020](https://github.com/laststance/react-typescript-todo-example-2020) using use-app-state, so it might be a good example project.
 
 
 ## 🥃 Advanced
