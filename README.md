@@ -48,14 +48,14 @@ ReactDOM.render(
 function App() {
   const [appState, setAppState] = useAppState()
   
-  const inclement = () => setAppState({ count: appState.count + 1 })
+  const increment = () => setAppState({ count: appState.count + 1 })
   const decrement = () => setAppState({ count: appState.count - 1 })
 
   return (
     <div>
       <button onClick={increment}>increment</button>
       <button onClick={decrement}>decrement</button>
-      <p>I have {appState.apple.count} apples </p>
+      <p>I have {appState.count} apples </p>
     </div>
   )
 }
