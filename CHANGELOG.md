@@ -1,5 +1,9 @@
 # Change Log
 
+# 1.2.5 (April, 7, 2020)
+
+- Update npm dependency
+
 # 1.2.4 (January, 6, 2020)
 
 - rename package with the transfer organization.
