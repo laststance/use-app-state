@@ -8,7 +8,7 @@ type Props = {
   children: ReactNode
 }
 
-const Provider: FC<Props> = props => {
+const Provider: FC<Props> = (props) => {
   const { appState } = props
 
   if (!isPlainObject(appState)) {
@@ -28,7 +28,7 @@ const Provider: FC<Props> = props => {
       )
     }
 
-    setState(tmpAppState => {
+    setState((tmpAppState) => {
       return { ...tmpAppState, ...state }
     })
   }
@@ -37,7 +37,7 @@ const Provider: FC<Props> = props => {
     <Context.Provider
       value={{
         appState: tmpAppState,
-        setAppState: setAppState
+        setAppState: setAppState,
       }}
     >
       {Children.only(props.children)}
