@@ -15,7 +15,7 @@
     "dist/src/**"
   ],
   "scripts": {
-    "test": "jest",
+    "test": "jest --verbose",
     "lint": "yarn eslint src --ext .ts,.tsx",
     "lint:fix": "yarn eslint src --ext .ts,.tsx --fix",
     "build": "tsc",
