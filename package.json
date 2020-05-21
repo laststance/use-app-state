@@ -47,7 +47,7 @@
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1",
     "ts-jest": "^26.0.0",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.3"
   },
   "dependencies": {}
 }
