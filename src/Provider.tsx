@@ -2,9 +2,14 @@ import React, { FC, useState, Children, ReactNode } from 'react'
 import isPlainObject from './util/isPlainObject'
 import Context from './Context'
 
-type Props = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  appState: Record<string, any>
+// Originary type AppState = Record<string, unknown> but TypeScript doing incorrect compatibility evaluation.
+// follow the link to detail https://github.com/microsoft/TypeScript/issues/15300
+// eslint-disable-next-line @typescript-eslint/ban-types
+export type AppState = Object
+export type SetAppState = (state: AppState) => void
+
+interface Props {
+  appState: AppState
   children: ReactNode
 }
 
@@ -20,8 +25,7 @@ const Provider: FC<Props> = (props) => {
   // "tmpAppState" role is avoid name collision "appState"
   const [tmpAppState, setState] = useState(appState)
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const setAppState: Function = (state: Record<string, any>) => {
+  const setAppState: SetAppState = (state: AppState) => {
     if (!isPlainObject(state)) {
       throw new Error(
         'use-app-sate: Expected the setAppState() argument to be a PlainObject'

@@ -3,13 +3,13 @@ import React from 'react'
 import Provider, { useAppState } from '../src/index'
 import '@testing-library/jest-dom'
 
-interface AppState {
-  count?: number
+interface TestingAppState {
+  count: number
   stable?: { [key: string]: string }
 }
 
 const Receiver = () => {
-  const [appState, setAppState] = useAppState<AppState>()
+  const [appState, setAppState] = useAppState<TestingAppState>()
 
   const clickCount = () => setAppState({ count: appState.count + 1 })
 
@@ -28,7 +28,7 @@ const Receiver = () => {
 }
 
 const App = () => {
-  const appState = { count: 0, stable: { blank: 'blank' } }
+  const appState: TestingAppState = { count: 0, stable: { blank: 'blank' } }
 
   return (
     <Provider appState={appState}>

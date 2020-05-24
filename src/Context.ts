@@ -1,6 +1,11 @@
 import { createContext } from 'react'
+import { AppState, SetAppState } from './Provider'
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
-const Context = createContext<Record<string, any>>({})
+export interface API {
+  appState: AppState
+  setAppState: SetAppState
+}
+
+const Context = createContext<API>(null)
 
 export default Context
