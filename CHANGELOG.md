@@ -1,5 +1,10 @@
 # Change Log
 
+# 1.2.6 (May, 27, 2020)
+
+- Upgrade to ESLint7 and resolve Breaking Change eorros [2dcf669](https://github.com/laststance/use-app-state/commit/2dcf6698234919e1b07aaec0f703d142aa84ed31)
+- Update some npm dependency
+
 # 1.2.5 (April, 7, 2020)
 
 - Update npm dependency
