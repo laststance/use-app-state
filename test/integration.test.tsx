@@ -31,7 +31,7 @@ const App = () => {
   const appState: TestingAppState = { count: 0, stable: { blank: 'blank' } }
 
   return (
-    <Provider appState={appState}>
+    <Provider initialState={appState}>
       <Receiver />
     </Provider>
   )

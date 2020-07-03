@@ -9,38 +9,37 @@ export type AppState = Object
 export type SetAppState = (state: AppState) => void
 
 interface Props {
-  appState: AppState
+  initialState: AppState
   children: ReactNode
 }
 
 const Provider: FC<Props> = (props) => {
-  const { appState } = props
+  const { initialState } = props
 
-  if (!isPlainObject(appState)) {
+  if (!isPlainObject(initialState)) {
     throw new Error(
       'use-app-state: Provider Expected the appState to be a PlainObject'
     )
   }
 
-  // "tmpAppState" role is avoid name collision "appState"
-  const [tmpAppState, setState] = useState(appState)
+  const [appState, setState] = useState(initialState)
 
-  const setAppState: SetAppState = (state: AppState) => {
-    if (!isPlainObject(state)) {
+  const setAppState: SetAppState = (newState: AppState) => {
+    if (!isPlainObject(newState)) {
       throw new Error(
         'use-app-sate: Expected the setAppState() argument to be a PlainObject'
       )
     }
 
-    setState((tmpAppState) => {
-      return { ...tmpAppState, ...state }
+    setState(() => {
+      return { ...appState, ...newState }
     })
   }
 
   return (
     <Context.Provider
       value={{
-        appState: tmpAppState,
+        appState: appState,
         setAppState: setAppState,
       }}
     >

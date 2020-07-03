@@ -6,7 +6,7 @@ test(`doesn't work without children`, () => {
   expect(() =>
     // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
     // @ts-ignore Because expectend used to JavaScirpt
-    TestRenderer.create(<Provider appState={{}} />)
+    TestRenderer.create(<Provider initialState={{}} />)
   ).toThrowErrorMatchingSnapshot()
 })
 
@@ -24,7 +24,7 @@ test(`doesn't work without giving appState`, () => {
 
 const renderElm = appState =>
   TestRenderer.create(
-    <Provider appState={appState}>
+    <Provider initialState={appState}>
       <div>elm</div>
     </Provider>
   ).toJSON()
