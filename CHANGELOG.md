@@ -1,5 +1,9 @@
 # Change Log
 
+# 1.2.7 (July, 6, 2020)
+
+- fix permanently remaining initial state key/values [0a557efd9ed998246baad7c97b6d755940d949a9](https://github.com/laststance/use-app-state/commit/0a557efd9ed998246baad7c97b6d755940d949a9)
+
 # 1.2.6 (May, 27, 2020)
 
 - Upgrade to ESLint7 and resolve Breaking Change eorros [2dcf669](https://github.com/laststance/use-app-state/commit/2dcf6698234919e1b07aaec0f703d142aa84ed31)
