@@ -5,7 +5,7 @@ import { Layout } from './style'
 
 const initialAppState = { count: 0 }
 ReactDOM.render(
-  <Provider appState={initialAppState}>
+  <Provider initialState={initialAppState}>
     <App />
   </Provider>,
   document.getElementById('root')
