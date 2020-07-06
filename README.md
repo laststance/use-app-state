@@ -13,7 +13,7 @@
 - [📺 Demo](#-demo)
 - [💾 Installation](#-installation)
 - [🛠 API](#%F0%9F%9B%A0-api)
-  - [`<Provider appState={AppState} />`](#provider-appstateappstate-)
+  - [`<Provider initialState={AppState} />`](#provider-appstateappstate-)
   - [`const [appState, setAppState] = useAppState()`](#const-appstate-setappstate--useappstate)
       - [Get value from `appState`](#get-value-from-appstate)
       - [update appState with `setAppState(appState: Object)`](#update-appstate-with-setappstateappstate-object)
@@ -39,7 +39,7 @@ import Provider, { useAppState } from '@laststance/use-app-state'
 const initialAppState = { count: 0 }
  
 ReactDOM.render(
-  <Provider appState={initialAppState}>
+  <Provider initialState={initialAppState}>
     <App />
   </Provider>,
   document.getElementById('root')
@@ -90,7 +90,7 @@ yarn add @laststance/use-app-state
 
 ## 🛠 API
 
-### `<Provider appState={AppState} />`
+### `<Provider initialState={AppState} />`
 
 + Make your AppState as a plain Javascript Object.(eg: `const GlobalStaate = {foo: "bar"}`)
 + Wrap Provider in your root app component.
@@ -101,10 +101,10 @@ import Provider from '@laststance/use-app-state'
 const initialAppState = { count: 0 }
 
 ReactDOM.render(
-  <Provider appState={initialAppState}>
+  <Provider initialState={initialAppState}>
     <App />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'))
 ```
 
 ### `const [appState, setAppState] = useAppState()`
@@ -176,7 +176,7 @@ return (<div>{foodListView}</div>)
 }
 
 ReactDOM.render(
-    <Provider appState={initialAppState}>
+    <Provider initialState={initialAppState}>
       <App>
     </Provider>,
   document.getElementById('root')
@@ -202,7 +202,7 @@ import useAction from './actions'
 
 const initialAppState = { count: 0 }
 ReactDOM.render(
-  <Provider appState={initialAppState}>
+  <Provider initialState={initialAppState}>
     <App />
   </Provider>,
   document.getElementById('root')
@@ -277,7 +277,7 @@ const fruitsState = {
 };
 
 const App = () => (
-  <FruitsProvider appState={fruitsState}>
+  <FruitsProvider initialState={fruitsState}>
     <FruitsList />
   </FruitsProvider>
 );
@@ -325,7 +325,7 @@ const appState = {
 };
 
 const App = () => (
-  <DrinkProvider appState={appState}>
+  <DrinkProvider initialState={appState}>
     <DrinkList />
   </DrinkProvider>
 );
