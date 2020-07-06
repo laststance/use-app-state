@@ -3,6 +3,7 @@
 
 > 🌏 useAppState() hook. that global version of setState() built on useContext.
 
+⚠️ [v1.2.7](https://github.com/laststance/use-app-state/releases/tag/1.2.7) [Breaking Change] Provider prop name was changed `<Provider initialState={{}}>` from `<Provider appState={{}}>`
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->

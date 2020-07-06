@@ -2,6 +2,7 @@
 
 # 1.2.7 (July, 6, 2020)
 
+- [Breaking Change] Provider prop name was changed `<Provider initialState={{}}>` from `<Provider appState={{}}>`
 - fix permanently remaining initial state key/values [0a557efd9ed998246baad7c97b6d755940d949a9](https://github.com/laststance/use-app-state/commit/0a557efd9ed998246baad7c97b6d755940d949a9)
 
 # 1.2.6 (May, 27, 2020)
