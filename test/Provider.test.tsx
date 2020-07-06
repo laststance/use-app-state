@@ -4,8 +4,7 @@ import TestRenderer from 'react-test-renderer'
 
 test(`doesn't work without children`, () => {
   expect(() =>
-    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-    // @ts-ignore Because expectend used to JavaScirpt
+    // @ts-ignore Because expected to be used from JavaScirpt
     TestRenderer.create(<Provider initialState={{}} />)
   ).toThrowErrorMatchingSnapshot()
 })
@@ -13,8 +12,7 @@ test(`doesn't work without children`, () => {
 test(`doesn't work without giving appState`, () => {
   expect(() =>
     TestRenderer.create(
-      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-      // @ts-ignore Because expectend used to JavaScirpt
+      // @ts-ignore Because expected to ne used from JavaScirpt
       <Provider>
         <div>elm</div>
       </Provider>
@@ -22,7 +20,7 @@ test(`doesn't work without giving appState`, () => {
   ).toThrowErrorMatchingSnapshot()
 })
 
-const renderElm = appState =>
+const renderElm = (appState) =>
   TestRenderer.create(
     <Provider initialState={appState}>
       <div>elm</div>
@@ -41,7 +39,7 @@ test(`work fine with PlainObject appState`, () => {
 
   const tree04 = renderElm({
     chunk: { home: { oneFloor: 'spacious', twoFloor: 'narrow' } },
-    array: [1, 2, 3, 4]
+    array: [1, 2, 3, 4],
   })
   expect(tree04).toMatchSnapshot()
 })
