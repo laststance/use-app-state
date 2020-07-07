@@ -9,7 +9,6 @@
   ],
   "author": "Ryota Murakami <dojce1048@gmail.com> (https://github.com/ryota-murakami)",
   "license": "MIT",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
   "files": [
