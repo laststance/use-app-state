@@ -2,7 +2,7 @@
 
 
 # use-app-state 
-
+![CI](https://github.com/laststance/use-app-state/workflows/CI/badge.svg)
 
 > 🌏 useAppState() hook. that global version of setState() built on useContext.
 
