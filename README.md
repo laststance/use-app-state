@@ -1,4 +1,5 @@
-⚠️ **[v1.2.7](https://github.com/laststance/use-app-state/releases/tag/1.2.7) [Breaking Change] Provider prop name was changed `<Provider initialState={{}}>` from `<Provider appState={{}}>`**
+# ⚠️ [v1.2.7](https://github.com/laststance/use-app-state/releases/tag/1.2.7) [Breaking Change]  
+## Provider prop name was changed `<Provider initialState={{}}>` from `<Provider appState={{}}>`
 
 
 # use-app-state 
