@@ -1,7 +1,3 @@
-# ⚠️ [v1.2.7](https://github.com/laststance/use-app-state/releases/tag/1.2.7) [Breaking Change]  
-## Provider prop name was changed `<Provider initialState={{}}>` from `<Provider appState={{}}>`
-
-
 # use-app-state 
 ![CI](https://github.com/laststance/use-app-state/workflows/CI/badge.svg) ![minizip](https://badgen.net/bundlephobia/minzip/@laststance/use-app-state) [![Depfu](https://badges.depfu.com/badges/7c09c0977aa273b25bebc74befdfbee9/status.svg)](https://depfu.com) [![Depfu](https://badges.depfu.com/badges/7c09c0977aa273b25bebc74befdfbee9/overview.svg)](https://depfu.com/github/laststance/use-app-state?project_id=9896) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
