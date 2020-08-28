@@ -56,7 +56,7 @@ test('should count increments by setAppState()', () => {
   expect(countNode).toHaveTextContent('3')
   fireEvent.click(countNode)
 
-  // stable is still untouch above tests, so confirm state is appStateValue
+  // sould be keep untouched values after merged by return { ...appState, ...newState }
   const stableNode = getByTestId('stable')
   expect(stableNode).toHaveTextContent(`{"blank":"blank"}`)
 })
