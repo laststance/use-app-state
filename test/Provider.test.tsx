@@ -9,7 +9,7 @@ test(`doesn't work without children`, () => {
   ).toThrowErrorMatchingSnapshot()
 })
 
-test(`doesn't work without giving appState`, () => {
+test(`doesn't work without giving initialState`, () => {
   expect(() =>
     TestRenderer.create(
       // @ts-ignore Because expected to ne used from JavaScirpt
@@ -20,14 +20,14 @@ test(`doesn't work without giving appState`, () => {
   ).toThrowErrorMatchingSnapshot()
 })
 
-const renderElm = (appState) =>
+const renderElm = (initialState) =>
   TestRenderer.create(
-    <Provider initialState={appState}>
+    <Provider initialState={initialState}>
       <div>elm</div>
     </Provider>
   ).toJSON()
 
-test(`work fine with PlainObject appState`, () => {
+test(`work fine with PlainObject initialState`, () => {
   const tree01 = renderElm({})
   expect(tree01).toMatchSnapshot()
 
@@ -46,33 +46,33 @@ test(`work fine with PlainObject appState`, () => {
 
 test(`doesn't work without PlainObject`, () => {
   expect(() => renderElm(1)).toThrowError(
-    'use-app-state: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the initialState to be a PlainObject'
   )
   expect(() => renderElm([])).toThrowError(
-    'use-app-state: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the initialState to be a PlainObject'
   )
   expect(() => renderElm(new Map())).toThrowError(
-    'use-app-state: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the initialState to be a PlainObject'
   )
   expect(() => renderElm(new Date())).toThrowError(
-    'use-app-state: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the initialState to be a PlainObject'
   )
   expect(() => renderElm('string')).toThrowError(
-    'use-app-state: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the initialState to be a PlainObject'
   )
   expect(() => renderElm(true)).toThrowError(
-    'use-app-state: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the initialState to be a PlainObject'
   )
   expect(() => renderElm(undefined)).toThrowError(
-    'use-app-state: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the initialState to be a PlainObject'
   )
   expect(() => renderElm(null)).toThrowError(
-    'use-app-state: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the initialState to be a PlainObject'
   )
   expect(() => renderElm(NaN)).toThrowError(
-    'use-app-state: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the initialState to be a PlainObject'
   )
   expect(() => renderElm({ count: 0 })).not.toThrowError(
-    'use-app-state: Provider Expected the appState to be a PlainObject'
+    'use-app-state: Provider Expected the initialState to be a PlainObject'
   )
 })
