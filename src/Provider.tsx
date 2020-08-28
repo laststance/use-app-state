@@ -18,7 +18,7 @@ const Provider: FC<Props> = (props) => {
 
   if (!isPlainObject(initialState)) {
     throw new Error(
-      'use-app-state: Provider Expected the appState to be a PlainObject'
+      'use-app-state: Provider Expected the initialState to be a PlainObject'
     )
   }
 
