@@ -1,4 +1,4 @@
-import React, { FC, useState, Children, ReactNode } from 'react'
+import React, { FC, useState, Children } from 'react'
 import isPlainObject from './util/isPlainObject'
 import Context from './Context'
 
@@ -10,12 +10,9 @@ export type SetAppState = (state: AppState) => void
 
 interface Props {
   initialState: AppState
-  children: ReactNode
 }
 
-const Provider: FC<Props> = (props) => {
-  const { initialState } = props
-
+const Provider: FC<Props> = ({ initialState, children }) => {
   if (!isPlainObject(initialState)) {
     throw new Error(
       'use-app-state: Provider Expected the initialState to be a PlainObject'
@@ -43,7 +40,7 @@ const Provider: FC<Props> = (props) => {
         setAppState: setAppState,
       }}
     >
-      {Children.only(props.children)}
+      {Children.only(children)}
     </Context.Provider>
   )
 }
