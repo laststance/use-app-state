@@ -1,5 +1,8 @@
 # Change Log
 
+# 1.2.8 (August, 28, 2020)
+- fix error message [8df1d63](https://github.com/laststance/use-app-state/commit/8df1d630591145ffea124419077adf16e55d162d)
+
 # 1.2.7 (July, 6, 2020)
 
 - [Breaking Change] Provider prop name was changed `<Provider initialState={{}}>` from `<Provider appState={{}}>`
