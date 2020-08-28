@@ -12,7 +12,7 @@ test(`doesn't work without children`, () => {
 test(`doesn't work without giving initialState`, () => {
   expect(() =>
     TestRenderer.create(
-      // @ts-ignore Because expected to ne used from JavaScirpt
+      // @ts-ignore Because expected to be used from JavaScirpt
       <Provider>
         <div>elm</div>
       </Provider>
