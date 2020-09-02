@@ -17,7 +17,7 @@
   - [`const [appState, setAppState] = useAppState()`](#const-appstate-setappstate--useappstate)
       - [Get value from `appState`](#get-value-from-appstate)
       - [update appState with `setAppState(appState: Object)`](#update-appstate-with-setappstateappstate-object)
-- [😎TypeScript](#typescript)
+- [TypeScript 📝](#typescript)
   - [Example](#example)
 - [🥃 Advanced](#-advanced)
   - [・action abstraction](#%E3%83%BBaction-abstraction)
