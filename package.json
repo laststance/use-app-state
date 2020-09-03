@@ -9,6 +9,7 @@
   ],
   "author": "Ryota Murakami <dojce1048@gmail.com> (https://github.com/ryota-murakami)",
   "license": "MIT",
+  "homepage": "https://github.com/laststance/use-app-state",
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
   "files": [
