@@ -20,7 +20,6 @@
     "lint": "yarn eslint src --ext .ts,.tsx",
     "lint:fix": "yarn eslint src --ext .ts,.tsx --fix",
     "build": "tsc",
-    "expriment": "cp -fR dist example/node_modules/@laststance/use-app-sate/",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"
   },
