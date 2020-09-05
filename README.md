@@ -184,8 +184,6 @@ ReactDOM.render(
 )
 ```
 
-[React TypeScript Todo Example 2020](https://github.com/laststance/react-typescript-todo-example-2020) using use-app-state, so it might be a good example project.
-
 ## 🥃 Advanced
 
 This is an abstract example utilizing [custom Hooks](https://reactjs.org/docs/hooks-custom.html).
