@@ -26,12 +26,7 @@
       "version": "detect"
     }
   },
-  "plugins": [
-    "jest",
-    "prettier",
-    "react-hooks",
-    "@typescript-eslint"
-  ],
+  "plugins": ["jest", "prettier", "react-hooks", "@typescript-eslint"],
   "rules": {
     "prettier/prettier": [
       "warn",
@@ -40,9 +35,7 @@
         "semi": false
       }
     ],
-    "no-unused-vars": [
-      "error"
-    ],
+    "no-unused-vars": ["error"],
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",

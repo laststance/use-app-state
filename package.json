@@ -20,6 +20,7 @@
     "lint": "yarn eslint src --ext .ts,.tsx",
     "lint:fix": "yarn eslint src --ext .ts,.tsx --fix",
     "build": "tsc",
+    "prettier": "prettier --write CHANGELOG.md README.md .github/workflows/ci.yml jest.config.js jest.setup.js .prettierrc tsconfig.json .eslintrc",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"
   },

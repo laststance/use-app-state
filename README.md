@@ -1,12 +1,11 @@
-# use-app-state 
-![CI](https://github.com/laststance/use-app-state/workflows/CI/badge.svg) ![minizip](https://badgen.net/bundlephobia/minzip/@laststance/use-app-state) [![Depfu](https://badges.depfu.com/badges/7c09c0977aa273b25bebc74befdfbee9/status.svg)](https://depfu.com) [![Depfu](https://badges.depfu.com/badges/7c09c0977aa273b25bebc74befdfbee9/overview.svg)](https://depfu.com/github/laststance/use-app-state?project_id=9896) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors)
+# use-app-state
 
+![CI](https://github.com/laststance/use-app-state/workflows/CI/badge.svg) ![minizip](https://badgen.net/bundlephobia/minzip/@laststance/use-app-state) [![Depfu](https://badges.depfu.com/badges/7c09c0977aa273b25bebc74befdfbee9/status.svg)](https://depfu.com) [![Depfu](https://badges.depfu.com/badges/7c09c0977aa273b25bebc74befdfbee9/overview.svg)](https://depfu.com/github/laststance/use-app-state?project_id=9896) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors)
 
 > 🌏 useAppState() hook. that global version of setState() built on useContext.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
 
 - [😀 Usage](#-usage)
 - [🤔 Why](#-why)
@@ -15,8 +14,8 @@
 - [🛠 API](#%F0%9F%9B%A0-api)
   - [`<Provider initialState={AppState} />`](#provider-appstateappstate-)
   - [`const [appState, setAppState] = useAppState()`](#const-appstate-setappstate--useappstate)
-      - [Get value from `appState`](#get-value-from-appstate)
-      - [update appState with `setAppState(appState: Object)`](#update-appstate-with-setappstateappstate-object)
+    - [Get value from `appState`](#get-value-from-appstate)
+    - [update appState with `setAppState(appState: Object)`](#update-appstate-with-setappstateappstate-object)
 - [TypeScript 📝](#typescript)
   - [Example](#example)
 - [🥃 Advanced](#-advanced)
@@ -34,20 +33,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Provider, { useAppState } from '@laststance/use-app-state'
- 
+
 // initialAppState must be Plain Object
 const initialAppState = { count: 0 }
- 
+
 ReactDOM.render(
   <Provider initialState={initialAppState}>
     <App />
   </Provider>,
   document.getElementById('root')
 )
- 
+
 function App() {
   const [appState, setAppState] = useAppState()
-  
+
   const increment = () => setAppState({ count: appState.count + 1 })
   const decrement = () => setAppState({ count: appState.count - 1 })
 
@@ -64,23 +63,23 @@ function App() {
 ## 🤔 Why
 
 I wanted **just global version of `setState()`** in some projects.
-So I setup code with `useState()`and `useContext()` then export `useAppState()` hook. 
+So I setup code with `useState()`and `useContext()` then export `useAppState()` hook.
 Finally added test, TypeScript support with published on npm. 🤗
 
 There is no special things against generally kind of `useContext()` hook based global store.
 
-
 ## 📺 Demo
+
 [![Edit use-app-state-exampe](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/use-app-state-exampe-oreg7?fontsize=14)
 
 <a href="https://codesandbox.io/s/use-app-state-example-oreg7">![codesandbox](./images/codesandbox.gif)</a>
-
 
 ## 💾 Installation
 
 ```sh
 npm install @laststance/use-app-state
 ```
+
 or
 
 ```sh
@@ -92,8 +91,9 @@ yarn add @laststance/use-app-state
 
 ### `<Provider initialState={AppState} />`
 
-+ Make your AppState as a plain Javascript Object.(eg: `const GlobalStaate = {foo: "bar"}`)
-+ Wrap Provider in your root app component.
+- Make your AppState as a plain Javascript Object.(eg: `const GlobalStaate = {foo: "bar"}`)
+- Wrap Provider in your root app component.
+
 ```jsx
 import Provider from '@laststance/use-app-state'
 
@@ -104,12 +104,13 @@ ReactDOM.render(
   <Provider initialState={initialAppState}>
     <App />
   </Provider>,
-  document.getElementById('root'))
+  document.getElementById('root')
+)
 ```
 
 ### `const [appState, setAppState] = useAppState()`
 
-+ Gives interface to access and set the global appState.
+- Gives interface to access and set the global appState.
 
 ##### Get value from `appState`
 
@@ -119,8 +120,8 @@ import { useAppState } from '@laststance/use-app-state'
 
 const AppleComponent = () => {
   const [appState, setAppState] = useAppState()
-  
-  return (<div>{appState.thisIsMyValue}</div>)
+
+  return <div>{appState.thisIsMyValue}</div>
 }
 ```
 
@@ -132,9 +133,9 @@ import { useAppState } from '@laststance/use-app-state'
 
 const NintendoComponent = () => {
   const [appState, setAppState] = useAppState()
-  const orderSmashBros = () => setAppState({sales: appState.sales + 1 })
-  
-  return (<button onClick={orderSmashBros}>You can not wait!!</button>)
+  const orderSmashBros = () => setAppState({ sales: appState.sales + 1 })
+
+  return <button onClick={orderSmashBros}>You can not wait!!</button>
 }
 ```
 
@@ -185,7 +186,6 @@ ReactDOM.render(
 
 [React TypeScript Todo Example 2020](https://github.com/laststance/react-typescript-todo-example-2020) using use-app-state, so it might be a good example project.
 
-
 ## 🥃 Advanced
 
 This is an abstract example utilizing [custom Hooks](https://reactjs.org/docs/hooks-custom.html).
@@ -193,6 +193,7 @@ This is an abstract example utilizing [custom Hooks](https://reactjs.org/docs/ho
 ### ・action abstraction
 
 - **src/index.js**
+
 ```jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -223,6 +224,7 @@ function App() {
 ```
 
 - **src/actions.js**
+
 ```js
 import { useAppState } from '@laststance/use-app-state'
 
@@ -242,13 +244,14 @@ export default useAction
 ### ・Multiple AppStates
 
 - **src/index.js**
-```jsx
-import React from "react";
-import ReactDOM from "react-dom";
-import DrinkList from "./DrinkList";
-import FruitsList from "./FruitsList";
 
-import "./styles.css";
+```jsx
+import React from 'react'
+import ReactDOM from 'react-dom'
+import DrinkList from './DrinkList'
+import FruitsList from './FruitsList'
+
+import './styles.css'
 
 function App() {
   return (
@@ -256,47 +259,48 @@ function App() {
       <DrinkList />
       <FruitsList />
     </div>
-  );
+  )
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+const rootElement = document.getElementById('root')
+ReactDOM.render(<App />, rootElement)
 ```
 
 - **src/FruitsList.js**
+
 ```jsx
-import React, { useRef } from "react";
-import FruitsProvider, { useAppState } from "@laststance/use-app-state";
+import React, { useRef } from 'react'
+import FruitsProvider, { useAppState } from '@laststance/use-app-state'
 
 const fruitsState = {
   fruitsList: [
-    { id: 0, name: "orange" },
-    { id: 1, name: "apple" },
-    { id: 2, name: "berry" }
-  ]
-};
+    { id: 0, name: 'orange' },
+    { id: 1, name: 'apple' },
+    { id: 2, name: 'berry' },
+  ],
+}
 
 const App = () => (
   <FruitsProvider initialState={fruitsState}>
     <FruitsList />
   </FruitsProvider>
-);
+)
 
 const FruitsList = () => {
-  const [appState, setAppState] = useAppState();
-  const button = useRef();
+  const [appState, setAppState] = useAppState()
+  const button = useRef()
 
   const addPeaches = () => {
-    appState.fruitsList.push({ id: 3, name: "peaches" });
-    setAppState(appState);
-    button.current.disabled = true;
-  };
+    appState.fruitsList.push({ id: 3, name: 'peaches' })
+    setAppState(appState)
+    button.current.disabled = true
+  }
 
   return (
     <div>
       <h3>FruitsList</h3>
       <ul>
-        {appState.fruitsList.map(f => (
+        {appState.fruitsList.map((f) => (
           <li key={f.id}>{f.name}</li>
         ))}
       </ul>
@@ -304,48 +308,48 @@ const FruitsList = () => {
         Add peaches
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default App;
-
+export default App
 ```
 
 - **src/DrinkList.js**
+
 ```jsx
-import React, { useRef } from "react";
-import DrinkProvider, { useAppState } from "@laststance/use-app-state";
+import React, { useRef } from 'react'
+import DrinkProvider, { useAppState } from '@laststance/use-app-state'
 
 const appState = {
   drinkList: [
-    { id: 0, name: "water" },
-    { id: 1, name: "cola" },
-    { id: 2, name: "tea" }
-  ]
-};
+    { id: 0, name: 'water' },
+    { id: 1, name: 'cola' },
+    { id: 2, name: 'tea' },
+  ],
+}
 
 const App = () => (
   <DrinkProvider initialState={appState}>
     <DrinkList />
   </DrinkProvider>
-);
+)
 
 const DrinkList = () => {
-  const [appSate, setAppState] = useAppState();
-  const button = useRef();
-  const drinkList = appSate.drinkList;
+  const [appSate, setAppState] = useAppState()
+  const button = useRef()
+  const drinkList = appSate.drinkList
 
   const addSoda = () => {
-    appSate.drinkList.push({ id: 3, name: "soda" });
-    setAppState(appSate);
-    button.current.disabled = true;
-  };
+    appSate.drinkList.push({ id: 3, name: 'soda' })
+    setAppState(appSate)
+    button.current.disabled = true
+  }
 
   return (
     <div>
       <h3>DrinkList</h3>
       <ul>
-        {drinkList.map(d => (
+        {drinkList.map((d) => (
           <li key={d.id}>{d.name}</li>
         ))}
       </ul>
@@ -353,13 +357,13 @@ const DrinkList = () => {
         Add Soda
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
-Full code available on CodeSandbox.  
+Full code available on CodeSandbox.
 
 [![Edit use-app-state-multiple-appState-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/use-app-state-multiple-appState-example-zwqxd?fontsize=14)
 
