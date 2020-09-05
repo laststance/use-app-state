@@ -139,7 +139,7 @@ const NintendoComponent = () => {
 }
 ```
 
-## 😎TypeScript
+## 📕 TypeScript
 
 This package contains an `index.d.ts` type definition file, so you can use it in TypeScript without extra configuration.
 
