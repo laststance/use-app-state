@@ -7,16 +7,17 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+
 - [😀 Usage](#-usage)
 - [🤔 Why](#-why)
 - [📺 Demo](#-demo)
 - [💾 Installation](#-installation)
 - [🛠 API](#%F0%9F%9B%A0-api)
-  - [`<Provider initialState={AppState} />`](#provider-appstateappstate-)
+  - [`<Provider initialState={AppState} />`](#provider-initialstateappstate-)
   - [`const [appState, setAppState] = useAppState()`](#const-appstate-setappstate--useappstate)
-    - [Get value from `appState`](#get-value-from-appstate)
-    - [update appState with `setAppState(appState: Object)`](#update-appstate-with-setappstateappstate-object)
-- [TypeScript 📝](#typescript)
+      - [Get value from `appState`](#get-value-from-appstate)
+      - [update appState with `setAppState(appState: Object)`](#update-appstate-with-setappstateappstate-object)
+- [📕 TypeScript](#-typescript)
   - [Example](#example)
 - [🥃 Advanced](#-advanced)
   - [・action abstraction](#%E3%83%BBaction-abstraction)
