@@ -59,11 +59,10 @@ function App() {
 
 ## 🤔 Why
 
-I wanted **just `setState()` but can use ** in some projects.
-So I setup code with `useState()`and `useContext()` in the application code layer, and then export `useAppState()` hook as a library.
+I wanted **just `setState()` but can use across the another components** for prototyping.
 
-There is no special things against generally kind of `useContext()` hook based global store.  
-Therefore you have to some technique if you want to apply ultimate performance tuning
+There is no special things against generally common kind of `useContext()` hook based global store.  
+Therefore you have to apply some technique if you want to be thorough ultimate performance tune.
 
 ## 📺 Demo
 
