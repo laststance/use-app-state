@@ -60,11 +60,11 @@ function App() {
 
 ## 🤔 Why
 
-I wanted **just global version of `setState()`** in some projects.
-So I setup code with `useState()`and `useContext()` then export `useAppState()` hook.
-Finally added test, TypeScript support with published on npm. 🤗
+I wanted **just `setState()` but can use ** in some projects.
+So I setup code with `useState()`and `useContext()` in the application code layer, and then export `useAppState()` hook as a library.  
 
-There is no special things against generally kind of `useContext()` hook based global store.
+There is no special things against generally kind of `useContext()` hook based global store.  
+Therefore you have to some technique if you want to apply ultimate performance tuning
 
 ## 📺 Demo
 
