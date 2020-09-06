@@ -30,15 +30,15 @@
 // index.js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Provider, { useAppState } from '@laststance/use-app-state'
+import AppStateRoot, { useAppState } from '@laststance/use-app-state'
 
-// initialAppState must be Plain Object
-const initialAppState = { count: 0 }
+// initialState must be Plain Object
+const initialState = { count: 0 }
 
 ReactDOM.render(
-  <Provider initialState={initialAppState}>
+  <AppStateRoot initialState={initialState}>
     <App />
-  </Provider>,
+  </AppStateRoot>,
   document.getElementById('root')
 )
 
@@ -93,15 +93,15 @@ yarn add @laststance/use-app-state
 - Wrap Provider in your root app component.
 
 ```jsx
-import Provider from '@laststance/use-app-state'
+import /* Provider is default exported. So any available whatever you want */ StateWrapper from '@laststance/use-app-state'
 
 // initialAppState must be Plain Object
-const initialAppState = { count: 0 }
+const initialState = { count: 0 }
 
 ReactDOM.render(
-  <Provider initialState={initialAppState}>
+  <StateWrapper initialState={initialState}>
     <App />
-  </Provider>,
+  </StateWrapper>,
   document.getElementById('root')
 )
 ```
