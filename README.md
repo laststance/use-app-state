@@ -113,7 +113,6 @@ ReactDOM.render(
 ##### Get value from `appState`
 
 ```jsx
-// example
 import { useAppState } from '@laststance/use-app-state'
 
 const AppleComponent = () => {
