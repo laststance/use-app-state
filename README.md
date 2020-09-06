@@ -89,7 +89,7 @@ yarn add @laststance/use-app-state
 
 ### `<Provider initialState={AppState} />`
 
-- Make your AppState as a plain Javascript Object.(eg: `const GlobalStaate = {foo: "bar"}`)
+- Make your AppState as a plain Javascript Object.(eg: `const AppState = {foo: "bar"}`)
 - Wrap Provider in your root app component.
 
 ```jsx
