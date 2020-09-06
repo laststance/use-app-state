@@ -7,7 +7,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [😀 Usage](#-usage)
 - [🤔 Why](#-why)
 - [📺 Demo](#-demo)
@@ -15,8 +14,8 @@
 - [🛠 API](#%F0%9F%9B%A0-api)
   - [`<Provider initialState={AppState} />`](#provider-initialstateappstate-)
   - [`const [appState, setAppState] = useAppState()`](#const-appstate-setappstate--useappstate)
-      - [Get value from `appState`](#get-value-from-appstate)
-      - [update appState with `setAppState(appState: Object)`](#update-appstate-with-setappstateappstate-object)
+    - [Get value from `appState`](#get-value-from-appstate)
+    - [update appState with `setAppState(appState: Object)`](#update-appstate-with-setappstateappstate-object)
 - [📕 TypeScript](#-typescript)
   - [Example](#example)
 - [LICENSE](#license)
@@ -61,7 +60,7 @@ function App() {
 ## 🤔 Why
 
 I wanted **just `setState()` but can use ** in some projects.
-So I setup code with `useState()`and `useContext()` in the application code layer, and then export `useAppState()` hook as a library.  
+So I setup code with `useState()`and `useContext()` in the application code layer, and then export `useAppState()` hook as a library.
 
 There is no special things against generally kind of `useContext()` hook based global store.  
 Therefore you have to some technique if you want to apply ultimate performance tuning
