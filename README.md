@@ -126,7 +126,6 @@ const AppleComponent = () => {
 ##### update appState with `setAppState(appState: Object)`
 
 ```jsx
-// example
 import { useAppState } from '@laststance/use-app-state'
 
 const NintendoComponent = () => {
