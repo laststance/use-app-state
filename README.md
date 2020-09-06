@@ -82,7 +82,6 @@ or
 
 ```sh
 yarn add @laststance/use-app-state
-
 ```
 
 ## 🛠 API
