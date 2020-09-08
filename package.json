@@ -1,6 +1,6 @@
 {
   "name": "@laststance/use-app-state",
-  "version": "1.2.8",
+  "version": "1.2.12",
   "description": "useAppState() hook. that global version of setState() built on useContext.",
   "keywords": [
     "react",
