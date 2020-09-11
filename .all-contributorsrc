@@ -1,6 +1,6 @@
 {
   "projectName": "use-app-state",
-  "projectOwner": "ryota-murakami",
+  "projectOwner": "laststance",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
@@ -28,7 +28,17 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "gnasamx",
+      "name": "Ganesh Pawar",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/46209368?v=4",
+      "profile": "https://github.com/gnasamx",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "skipCi": true
 }
