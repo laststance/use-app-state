@@ -148,7 +148,7 @@ interface Food {
   name: string
 }
 
-type TodoList = Todo[]
+type FoodList = Food[]
 
 interface AppState {
   FoodList: FoodList
