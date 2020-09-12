@@ -66,9 +66,9 @@ Therefore you have to apply some technique if you want to be thorough ultimate p
 
 ## 📺 Demo
 
-[![Edit use-app-state-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/use-app-state-example-y3z44?fontsize=14&hidenavigation=1&theme=dark)
+[![Edit @laststance/use-app-state Example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/laststanceuse-app-state-example-1r0ff?fontsize=14&hidenavigation=1&theme=dark)
 
-<a href="https://codesandbox.io/s/use-app-state-example-oreg7">![codesandbox](./images/codesandbox.gif)</a>
+<a href="https://codesandbox.io/s/laststanceuse-app-state-example-1r0ff?fontsize=14&hidenavigation=1&theme=dark">![codesandbox](./images/codesandbox.gif)</a>
 
 ## 💾 Installation
 
