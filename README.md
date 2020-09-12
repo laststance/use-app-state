@@ -70,6 +70,8 @@ Therefore you have to apply some technique if you want to be thorough ultimate p
 
 <a href="https://codesandbox.io/s/laststanceuse-app-state-example-1r0ff?fontsize=14&hidenavigation=1&theme=dark">![codesandbox](./images/codesandbox.gif)</a>
 
+> github: https://github.com/ryota-murakami/use-app-state-example
+
 ## 💾 Installation
 
 ```sh
