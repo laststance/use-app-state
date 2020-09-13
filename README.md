@@ -161,7 +161,7 @@ let initialAppState: AppState = {
 }
 
 const App = () => {
-const [appState, setAppState] = useAppState<AppState>() // pass appState object type as generic
+const [appState, setAppState] = useAppState<AppState>() // pass appState object type as a generics
 const item1: Food = {id: 'j4i3t280u', name: 'Hamburger'}
 const item2: Food = {id: 'f83ja0j2t', name: 'Fried chicken'}
 setAppState({foodList: [item1, item2]})
