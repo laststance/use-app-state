@@ -1,5 +1,9 @@
 # Change Log
 
+# 1.2.14 (October, 31, 2020)
+
+- Update React peerDependency
+
 # 1.2.12 (September, 12, 2020)
 
 - nothing change from 1.2.8
