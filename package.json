@@ -32,7 +32,7 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@types/jest": "^26.0.18",
-    "@types/node": "^14.14.11",
+    "@types/node": "^14.14.12",
     "@types/react": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.9.1",
     "@typescript-eslint/parser": "^4.9.1",
