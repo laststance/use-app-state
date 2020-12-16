@@ -6,6 +6,7 @@ import Context from './Context'
 // follow the link to detail https://github.com/microsoft/TypeScript/issues/15300
 // eslint-disable-next-line @typescript-eslint/ban-types
 export type AppState = Object
+// eslint-disable-next-line no-unused-vars
 export type SetAppState = (state: AppState) => void
 
 interface Props {
