@@ -38,7 +38,7 @@
     "@typescript-eslint/parser": "^5.3.1",
     "all-contributors-cli": "^6.20.0",
     "eslint": "^8.2.0",
-    "eslint-plugin-jest": "^25.2.3",
+    "eslint-plugin-jest": "^25.2.4",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.3.0",
