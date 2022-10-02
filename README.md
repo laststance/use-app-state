@@ -1,3 +1,13 @@
+## A Note from the Author (@ryota-murakami, Oct 2 2022):
+
+Hi! I created this library four years ago, to simplify the passing of values between components in prototyping.  
+But [This lib doesn't support React v18's Concurrent Rendering](https://reactjs.org/blog/2022/03/29/react-v18.html#what-is-concurrent-react) and remaining performance issue.  
+So i deprecate this lib and reccomends other state management library like [Redux Toolkit](https://redux-toolkit.js.org/), [Jotai](https://jotai.org/).  
+I thank all the users and contributors of this library, thank you ever so much.
+
+***
+
+
 # @laststance/use-app-state
 
 ![CI](https://github.com/laststance/use-app-state/workflows/CI/badge.svg) ![npm](https://img.shields.io/npm/v/@laststance/use-app-state) ![minizip](https://badgen.net/bundlephobia/minzip/@laststance/use-app-state) [![Depfu](https://badges.depfu.com/badges/7c09c0977aa273b25bebc74befdfbee9/overview.svg)](https://depfu.com/github/laststance/use-app-state?project_id=9896) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors)
